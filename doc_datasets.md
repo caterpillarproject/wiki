@@ -12,5 +12,5 @@ To be added soon.
 This will include:
 
 * all extant and destroyed catalogues which includes the properties of all halos at infall or at maximum mass etc.
-* minihalo catalogues: properties of minihalos (halos which first go above \\(T_{vir}\sim2000\\)K.
+* minihalo catalogues: properties of minihalos, i.e. halos which first go above \\(T_{vir}\sim2000\\)K.
 ... more soon.
