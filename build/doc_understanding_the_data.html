@@ -1,0 +1,1021 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="It is important to understand the layout of Caterpillar data &mdash; particularly if your project involves a lot of minipulation of the particle output.">
+<meta name="keywords" content="dataoutputparticlescataloguesdirectorydirectoriesfolderspaths,  ">
+<title>Understanding The Data  | Caterpillar Wiki</title>
+<link rel="stylesheet" type="text/css" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/modern-business.css">
+<link rel="stylesheet" type="text/css" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<link rel="stylesheet" type="text/css" href="css/theme-blue.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+
+
+  </head>
+
+<body>
+
+   <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+           
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> The Caterpillar Project Wiki</span></a>
+            
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                <li><a href="https://github.com/caterpillarproject/wiki" target="_blank">Github</a></li>
+                
+                
+                
+                
+
+
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+
+                <li class="dropdown">
+                    
+
+
+                <!-- special insertion -->
+
+               
+                <!-- Send feedback function -->
+<script>
+function SendLinkByMail(href) {
+var subject= "Caterpillar Wiki feedback";
+var body = "I have some feedback about the Understanding The Data page: ";
+body += window.location.href;
+body += "";
+var uri = "mailto:brendan.f.griffen@gmail.com?subject=";
+uri += encodeURIComponent(subject);
+uri += "&body=";
+uri += encodeURIComponent(body);
+window.location.href = uri;
+}
+</script>
+
+<li><a href="javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B" target="_blank"><i class="fa fa-envelope-o"></i> Feedback</a></li>
+
+
+                <li>
+                <!-- start search -->
+                <div id="search-demo-container">
+                <input type="text" id="search-input" placeholder="search...">
+                <ul id="results-container"></ul>
+                </div>
+                <script src="js/jekyll-search.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                SimpleJekyllSearch.init({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                dataSource: 'search.json',
+                searchResultTemplate: '<li><a href="{url}" title="Understanding The Data">{title}</a></li>',
+                noResultsText: 'No results found.',
+                limit: 10,
+                fuzzy: true,
+                })
+                </script>
+                <!-- end search -->
+                </li>
+
+                
+<script type="text/javascript">
+
+    $( document ).ready(function() {
+        if (top.location == location)  {
+            $(".escapeMe").remove();
+        }
+
+    });
+
+            function breakout_of_frame() {
+                if (top.location != location) {
+                    window.open(window.location.href, '_blank');
+
+                }
+
+            }
+</script>
+
+<li class="escapeMe">
+    <a href="#" onclick="breakout_of_frame()" ><i class="fa fa-sign-out"></i> Pop-out</a>
+</li>
+
+
+
+        <!-- /.container -->
+                </ul>
+
+
+</div></nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+
+
+<!-- Content Row -->
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-md-3">
+
+        <script>
+
+            $(document).ready(function() {
+                        // Initialize navgoco with default options
+                        $("#mysidebar").navgoco({
+                            caretHtml: '',
+                            accordion: true,
+                            openClass: 'active', // open
+                            save: false, // leave false or nav highlighting doesn't work right
+                            cookie: {
+                                name: 'navgoco',
+                                expires: false,
+                                path: '/'
+                        },
+                        slide: {
+                            duration: 400,
+                            easing: 'swing'
+                                }
+                                });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+            });
+
+        </script>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        
+        <ul id="mysidebar" class="nav">
+            <center>
+        <img title="logo" src="images/company_logo_big.png" style="max-width: 200px;" align="center">
+        
+            <span class="versionTagline">version 0.1</span>
+            </center>
+
+            
+            
+            
+        
+            
+            <li><a href="#">Caterpillar</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="index.html">Welcome</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_history_motivation.html">History and Motiviation</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Simulation Overview</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_initial_conditions.html">Initial Conditions</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_parent_simulation.html">Parent Simulation</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_zoomin_simulations.html">Zoom-in Simulations</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Data Access</a>
+                <ul>
+                    
+                    
+                    
+                    <li class="active"><a href="doc_understanding_the_data.html">Understanding The Data</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_modules_and_analysis.html">Your Analysis Modules</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_data_access_examples.html">Access Examples</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sams.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_datasets.html">Other Useful Postprocessed Datasets</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Codes & Halo Catalogues</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_gadget.html">Gadget</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_rockstar.html">Rockstar</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_consistenttrees.html">Consistent-Trees</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_subfind.html">SUBFIND</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Compute Cluster Information</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_mit_cluster.html">MIT - Antares & Bigbang</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_xsede.html">XSEDE - Stampede, Comet & Ranch</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_submitting_jobs.html">Submitting Jobs With SLURM</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Project Status</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_project_status.html">Halo Progress</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sam_progress.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_caterpillar_hydro.html">Caterpillar+Hydro</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Special Queries</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_faq.html">FAQ</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+        
+
+
+
+
+   <!-- if you aren't using the accordion, uncomment this block:
+
+        <p class="external">
+            <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+        </p>
+    -->
+
+    </div>
+       <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
+    <script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+            <!-- Content Column -->
+            <div class="col-md-9">
+
+                <div class="post-header">
+   <h1 class="post-title-main">Understanding The Data</h1>
+</div>
+
+<div class="post-content">
+
+   
+    <div class="summary">It is important to understand the layout of Caterpillar data &mdash; particularly if your project involves a lot of minipulation of the particle output.</div>
+   
+
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+    <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/doc_understanding_the_data.md" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+
+       <h2 id="directory-structure">Directory Structure</h2>
+
+<p>The master halo directory is here on <code>bigbang.mit.edu</code>: </p>
+
+<p><code>/bigbang/data/AnnaGroup/caterpillar/halos/</code></p>
+
+<p>Every halo has its own directory For example, <code>H1387186</code> is located here: </p>
+
+<p><code>/bigbang/data/AnnaGroup/caterpillar/halos/H1387186/</code></p>
+
+<p>All production halos follow the format:</p>
+
+<p><code>/bigbang/data/AnnaGroup/caterpillar/halos/H{parent_simulation_id}/</code></p>
+
+<p>Here is the initial list of Caterpillar halos found in Griffen et al. (2015) with their associated ID taken from the Rockstar catalogue of halos for the parent simulation.</p>
+
+<p><center> </p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Name</th>
+<th>PID</th>
+<th style="text-align: center">Name</th>
+<th>PID</th>
+<th style="text-align: center">Name</th>
+<th>PID</th>
+<th style="text-align: center">Name</th>
+<th>PID</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">Cat-1</td>
+<td>1631506</td>
+<td style="text-align: center">Cat-7</td>
+<td>94687</td>
+<td style="text-align: center">Cat-13</td>
+<td>1725272</td>
+<td style="text-align: center">Cat-19</td>
+<td>1292085</td>
+</tr>
+<tr>
+<td style="text-align: center">Cat-2</td>
+<td>264569</td>
+<td style="text-align: center">Cat-8</td>
+<td>1130025</td>
+<td style="text-align: center">Cat-14</td>
+<td>1195448</td>
+<td style="text-align: center">Cat-20</td>
+<td>95289</td>
+</tr>
+<tr>
+<td style="text-align: center">Cat-3</td>
+<td>1725139</td>
+<td style="text-align: center">Cat-9</td>
+<td>1387186</td>
+<td style="text-align: center">Cat-15</td>
+<td>1599988</td>
+<td style="text-align: center">Cat-21</td>
+<td>1232164</td>
+</tr>
+<tr>
+<td style="text-align: center">Cat-4</td>
+<td>44764</td>
+<td style="text-align: center">Cat-10</td>
+<td>581180</td>
+<td style="text-align: center">Cat-16</td>
+<td>796175</td>
+<td style="text-align: center">Cat-22</td>
+<td>1422331</td>
+</tr>
+<tr>
+<td style="text-align: center">Cat-5</td>
+<td>5320</td>
+<td style="text-align: center">Cat-11</td>
+<td>1725372</td>
+<td style="text-align: center">Cat-17</td>
+<td>388476</td>
+<td style="text-align: center">Cat-23</td>
+<td>196589</td>
+</tr>
+<tr>
+<td style="text-align: center">Cat-6</td>
+<td>581141</td>
+<td style="text-align: center">Cat-12</td>
+<td>1354437</td>
+<td style="text-align: center">Cat-18</td>
+<td>1079897</td>
+<td style="text-align: center">Cat-24</td>
+<td>1268839</td>
+</tr>
+</tbody></table>
+
+<p></center></p>
+
+<p>Within each of the produdtion runs you will find the following folders.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">H1387186/
+ -&gt; H1387186_EB_Z127_P7_LN7_LX12_O4_NV4/
+ -&gt; H1387186_EB_Z127_P7_LN7_LX14_O4_NV4/
+ -&gt; H1387186_EB_Z127_P7_LN7_LX11_O4_NV4/  
+ -&gt; H1387186_EB_Z127_P7_LN7_LX13_O4_NV4/
+ -&gt; H1387186_EB_Z127_P7_LN7_LX14_O4_NV4/
+ -&gt; contamination_suite/
+  -&gt; H1195448_BA_Z127_P7_LN7_LX11_O4_NV4  
+  -&gt; H1195448_EA_Z127_P7_LN7_LX11_O4_NV4
+  -&gt; H1195448_BA_Z127_P7_LN7_LX11_O4_NV5  
+  -&gt; H1195448_EA_Z127_P7_LN7_LX11_O4_NV5
+  -&gt; H1195448_BB_Z127_P7_LN7_LX11_O4_NV4  
+  -&gt; H1195448_EB_Z127_P7_LN7_LX11_O4_NV4
+  -&gt; H1195448_BC_Z127_P7_LN7_LX11_O4_NV4  
+  -&gt; H1195448_EC_Z127_P7_LN7_LX11_O4_NV4
+  -&gt; H1195448_BD_Z127_P7_LN7_LX11_O4_NV4  
+  -&gt; H1195448_EX_Z127_P7_LN7_LX11_O4_NV4
+  -&gt; H1195448_CA_Z127_P7_LN7_LX11_O4_NV4  
+  -&gt; H1195448_EX_Z127_P7_LN7_LX11_O4_NV5
+  -&gt; H1195448_CA_Z127_P7_LN7_LX11_O4_NV5
+</code></pre></div>
+<p>The naming convention is as follows: </p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">H1387186_EB_Z127_P7_LN7_LX12_O4_NV4
+  H1387186    <span class="c"># halo rockstar id from parent simulation</span>
+  EB          <span class="c"># initial conditions type, &#39;B&#39; for box&quot; etc.</span>
+  Z127        <span class="c"># starting redshift (z = 127)</span>
+  P7          <span class="c"># padding parameters (2^7)^3</span>
+  LN7         <span class="c"># level_min used in MUSIC (2^7)^3</span>
+  LX12        <span class="c"># level_max used in MUSIC (2^12)^3</span>
+  O4          <span class="c"># overlap parameter (2^4)^3</span>
+  NV4         <span class="c"># number of times the virial radius enclosed defining lagrangian volume</span>
+</code></pre></div>
+<p>Most of the terms remain the same for the entire Caterpillar suite. The only ones that do change are the <code>LX</code> value and the <code>B</code> value which signifies the resolution and lagrangian geometry accordingly. <code>NV</code> also represents the number of times the virial radius we enclosed within the parent volume (usually four, though sometimes 5).</p>
+
+<p>All halos directories will have three key sub-directories: <code>halos_bound/</code>, <code>outputs/</code> and <code>analysis/</code>. In each of these directors you&#39;ll find the following folders:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">H1387186_EB_Z127_P7_LN7_LX14_O4_NV4
+ -&gt; halos_bound/  <span class="c"># rockstar and merger tree catalogues</span>
+  -&gt; halos_0/     <span class="c"># each folder contains the catalogue for each snapshot</span>
+  -&gt; halos_1/
+  ...
+  -&gt; halos_319/
+  -&gt; outputs/
+  -&gt; trees/
+    -&gt; forests.list
+    -&gt; locations.dat
+    -&gt; tree_0_0_0.dat
+    -&gt; tree_0_0_1.dat
+    ...
+    -&gt; tree_1_1_1.dat
+    -&gt; tree.bin
+    -&gt; treeindex.csv
+ -&gt; outputs/      <span class="c"># gadget raw snapshot output (particle data)</span>
+  -&gt; snapdir_000/ <span class="c"># each folder contains the particle data for each snapshot</span>
+  -&gt; snapdir_001/
+  ...
+  -&gt; snapdir_319/
+  -&gt; groups_319/  <span class="c"># the subfind catalogues are also stored (mostly for the last snapshot)</span>
+  -&gt; hsmldir_319/ <span class="c"># the smoothing lengths for the corresponding particle data</span>
+ -&gt; analysis/     <span class="c"># post-processed output files (halo profiles, mass functions, minihalos etc.)</span>
+</code></pre></div>
+<p>You will also notice some other folders, such as <code>halos/</code> which was the original catalogues produced prior to our implementation of iterative binding. This data can be used to explore the benefits of using full iterative unbinding.</p>
+
+<h2 id="ancillary-information">Ancillary Information</h2>
+
+<p>At the top level of the halos directory (<code>/bigbang/data/AnnaGroup/caterpillar/halos/</code>), you will find <code>parent_zoom_index.txt</code>. This file contains the following kind of table</p>
+
+<table><thead>
+<tr>
+<th>parentid</th>
+<th>ictype</th>
+<th>LX</th>
+<th>NV</th>
+<th>zoomid</th>
+<th>min2</th>
+<th>x</th>
+<th>y</th>
+<th>z</th>
+<th>mvir</th>
+<th>rvir</th>
+<th>badflag</th>
+<th>badsubf</th>
+<th>allsnaps</th>
+</tr>
+</thead><tbody>
+<tr>
+<td>95289</td>
+<td>BB</td>
+<td>11</td>
+<td>4</td>
+<td>728</td>
+<td>1.127053</td>
+<td>48.957</td>
+<td>47.206</td>
+<td>52.622</td>
+<td>7.686e+11</td>
+<td>242.0</td>
+<td>0</td>
+<td>0</td>
+<td>0</td>
+</tr>
+<tr>
+<td>95289</td>
+<td>BB</td>
+<td>12</td>
+<td>4</td>
+<td>4911</td>
+<td>1.020584</td>
+<td>48.953</td>
+<td>47.193</td>
+<td>52.625</td>
+<td>7.557e+11</td>
+<td>240.7</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>95289</td>
+<td>BB</td>
+<td>13</td>
+<td>4</td>
+<td>32895</td>
+<td>0.924030</td>
+<td>48.966</td>
+<td>47.195</td>
+<td>52.626</td>
+<td>7.607e+11</td>
+<td>241.2</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>95289</td>
+<td>BB</td>
+<td>14</td>
+<td>4</td>
+<td>216324</td>
+<td>0.881211</td>
+<td>48.962</td>
+<td>47.205</td>
+<td>52.625</td>
+<td>7.026e+11</td>
+<td>234.9</td>
+<td>1</td>
+<td>1</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1195448</td>
+<td>EC</td>
+<td>11</td>
+<td>4</td>
+<td>282</td>
+<td>1.688313</td>
+<td>52.961</td>
+<td>55.513</td>
+<td>47.329</td>
+<td>7.439e+11</td>
+<td>239.4</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1195448</td>
+<td>EC</td>
+<td>12</td>
+<td>4</td>
+<td>1042</td>
+<td>1.544539</td>
+<td>52.951</td>
+<td>55.513</td>
+<td>47.323</td>
+<td>7.572e+11</td>
+<td>240.8</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>1195448</td>
+<td>EC</td>
+<td>13</td>
+<td>4</td>
+<td>6861</td>
+<td>1.499513</td>
+<td>52.944</td>
+<td>55.526</td>
+<td>47.308</td>
+<td>7.542e+11</td>
+<td>240.5</td>
+<td>0</td>
+<td>0</td>
+<td>1</td>
+</tr>
+<tr>
+<td>...</td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p>This above contains <em>Caterpillar as it stands today</em>. The columns are as follows:</p>
+
+<p><center> </p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Column</th>
+<th>Description</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">PARENTID</td>
+<td>the halo id number of the simulation from the parent run</td>
+</tr>
+<tr>
+<td style="text-align: center">ICTYPE</td>
+<td>the geometry of the initial conditions</td>
+</tr>
+<tr>
+<td style="text-align: center">LX</td>
+<td>level_max used in MUSIC</td>
+</tr>
+<tr>
+<td style="text-align: center">NV</td>
+<td>number of times we enclose the virial radius</td>
+</tr>
+<tr>
+<td style="text-align: center">MIN2</td>
+<td>distance to the closest contamination particle (parttype=2)</td>
+</tr>
+<tr>
+<td style="text-align: center">X</td>
+<td>x-position in the box</td>
+</tr>
+<tr>
+<td style="text-align: center">Y</td>
+<td>y-position in the box</td>
+</tr>
+<tr>
+<td style="text-align: center">Z</td>
+<td>z-position in the box</td>
+</tr>
+<tr>
+<td style="text-align: center">MVIR</td>
+<td>halos mass (in units of Msol/h)</td>
+</tr>
+<tr>
+<td style="text-align: center">RVIR</td>
+<td>halo virial radius (in units of kpc/h)</td>
+</tr>
+<tr>
+<td style="text-align: center">BADFLAG</td>
+<td>a binary flag (1 or 0) if there was a mismatch in parameters between the parent and zoom run</td>
+</tr>
+<tr>
+<td style="text-align: center">BADSUBF</td>
+<td>a binary flag (1 or 0) if the SUBFIND halo properties do not match the rockstar halo properties</td>
+</tr>
+<tr>
+<td style="text-align: center">ALLSNAPS</td>
+<td>a binary flag (1 or 0) if the all the snapshots exist</td>
+</tr>
+</tbody></table>
+
+<p></center> </p>
+
+<p>Although it is not recommended, you can load up any of these quantities by importing Brendan Griffen&#39;s modules:</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">brendanlib.grifflib</span> <span class="kn">as</span> <span class="nn">glib</span>
+<span class="kn">import</span> <span class="nn">haloutils</span> <span class="kn">as</span> <span class="nn">htils</span>
+
+<span class="n">catnum</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="n">lx</span> <span class="o">=</span> <span class="mi">14</span>
+
+<span class="n">hpath</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_hpath</span><span class="p">(</span><span class="n">catnum</span><span class="p">,</span><span class="n">lx</span><span class="p">)</span>
+<span class="n">xpos</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_quant_zoom</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="s">&#39;x&#39;</span><span class="p">)</span>
+<span class="n">min2</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_quant_zoom</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="s">&#39;min2&#39;</span><span class="p">)</span>
+</code></pre></div>
+
+<div class="tags">
+    
+    <b>Tags: </b>
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2015 Caterpillar Project. All rights reserved.<br />
+<p>Page last updated:</span> November 3, 2015<br/> Site last generated: Nov 3, 2015 <br />
+<p><img src="images/company_logo.jpg"/></p>
+                </div>
+            </div>
+        </footer>
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+            </div><!-- /.row -->
+
+    </div>    <!-- /.container -->
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-61923556-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</html>
+

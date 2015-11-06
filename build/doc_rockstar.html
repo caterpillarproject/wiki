@@ -1,0 +1,1066 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="The Caterpillar project primarily uses Rockstar for its halo finding. Here you can find an overview of the code and the properties of the halos you might wan...">
+<meta name="keywords" content="friends of friendshalo finderRockstarrockstaralgorithmcatalogue,  ">
+<title>Rockstar  | Caterpillar Wiki</title>
+<link rel="stylesheet" type="text/css" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/modern-business.css">
+<link rel="stylesheet" type="text/css" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<link rel="stylesheet" type="text/css" href="css/theme-blue.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+
+
+  </head>
+
+<body>
+
+   <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+           
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> The Caterpillar Project Wiki</span></a>
+            
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                <li><a href="https://github.com/caterpillarproject/wiki" target="_blank">Github</a></li>
+                
+                
+                
+                
+
+
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+
+                <li class="dropdown">
+                    
+
+
+                <!-- special insertion -->
+
+               
+                <!-- Send feedback function -->
+<script>
+function SendLinkByMail(href) {
+var subject= "Caterpillar Wiki feedback";
+var body = "I have some feedback about the Rockstar page: ";
+body += window.location.href;
+body += "";
+var uri = "mailto:brendan.f.griffen@gmail.com?subject=";
+uri += encodeURIComponent(subject);
+uri += "&body=";
+uri += encodeURIComponent(body);
+window.location.href = uri;
+}
+</script>
+
+<li><a href="javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B" target="_blank"><i class="fa fa-envelope-o"></i> Feedback</a></li>
+
+
+                <li>
+                <!-- start search -->
+                <div id="search-demo-container">
+                <input type="text" id="search-input" placeholder="search...">
+                <ul id="results-container"></ul>
+                </div>
+                <script src="js/jekyll-search.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                SimpleJekyllSearch.init({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                dataSource: 'search.json',
+                searchResultTemplate: '<li><a href="{url}" title="Rockstar">{title}</a></li>',
+                noResultsText: 'No results found.',
+                limit: 10,
+                fuzzy: true,
+                })
+                </script>
+                <!-- end search -->
+                </li>
+
+                
+<script type="text/javascript">
+
+    $( document ).ready(function() {
+        if (top.location == location)  {
+            $(".escapeMe").remove();
+        }
+
+    });
+
+            function breakout_of_frame() {
+                if (top.location != location) {
+                    window.open(window.location.href, '_blank');
+
+                }
+
+            }
+</script>
+
+<li class="escapeMe">
+    <a href="#" onclick="breakout_of_frame()" ><i class="fa fa-sign-out"></i> Pop-out</a>
+</li>
+
+
+
+        <!-- /.container -->
+                </ul>
+
+
+</div></nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+
+
+<!-- Content Row -->
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-md-3">
+
+        <script>
+
+            $(document).ready(function() {
+                        // Initialize navgoco with default options
+                        $("#mysidebar").navgoco({
+                            caretHtml: '',
+                            accordion: true,
+                            openClass: 'active', // open
+                            save: false, // leave false or nav highlighting doesn't work right
+                            cookie: {
+                                name: 'navgoco',
+                                expires: false,
+                                path: '/'
+                        },
+                        slide: {
+                            duration: 400,
+                            easing: 'swing'
+                                }
+                                });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+            });
+
+        </script>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        
+        <ul id="mysidebar" class="nav">
+            <center>
+        <img title="logo" src="images/company_logo_big.png" style="max-width: 200px;" align="center">
+        
+            <span class="versionTagline">version 0.1</span>
+            </center>
+
+            
+            
+            
+        
+            
+            <li><a href="#">Caterpillar</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="index.html">Welcome</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_history_motivation.html">History and Motiviation</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Simulation Overview</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_initial_conditions.html">Initial Conditions</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_parent_simulation.html">Parent Simulation</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_zoomin_simulations.html">Zoom-in Simulations</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Data Access</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_understanding_the_data.html">Understanding The Data</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_modules_and_analysis.html">Your Analysis Modules</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_data_access_examples.html">Access Examples</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sams.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_datasets.html">Other Useful Postprocessed Datasets</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Codes & Halo Catalogues</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_gadget.html">Gadget</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li class="active"><a href="doc_rockstar.html">Rockstar</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_consistenttrees.html">Consistent-Trees</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_subfind.html">SUBFIND</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Compute Cluster Information</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_mit_cluster.html">MIT - Antares & Bigbang</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_xsede.html">XSEDE - Stampede, Comet & Ranch</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_submitting_jobs.html">Submitting Jobs With SLURM</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Project Status</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_project_status.html">Halo Progress</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sam_progress.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_caterpillar_hydro.html">Caterpillar+Hydro</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Special Queries</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_faq.html">FAQ</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+        
+
+
+
+
+   <!-- if you aren't using the accordion, uncomment this block:
+
+        <p class="external">
+            <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+        </p>
+    -->
+
+    </div>
+       <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
+    <script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+            <!-- Content Column -->
+            <div class="col-md-9">
+
+                <div class="post-header">
+   <h1 class="post-title-main">Rockstar</h1>
+</div>
+
+<div class="post-content">
+
+   
+    <div class="summary">The Caterpillar project primarily uses Rockstar for its halo finding. Here you can find an overview of the code and the properties of the halos you might want to access.</div>
+   
+
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+    <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/doc_rockstar.md" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+
+       <h2 id="overview">Overview</h2>
+
+<p>Rockstar identifies dark matter halos, substructure, and tidal features in phase space.The approach is based on adaptive hierarchical refinement of friends-of-friends groups in six dimensions, which allows for robust (grid-independent, shape-independent, and noise-resilient) tracking of substructure; as such, it is named Rockstar (Robust Overdensity Calculation using K-Space Topologically Adaptive Refinement). The &quot;consistent trees&quot; algorithm for generating merger trees and halo catalogs explicitly ensures consistency of halo properties (mass, position, velocity, radius) across timesteps. The algorithm has demonstrated the ability to increase both the completeness (through inserting otherwise missing halos) and purity (through removing spurious objects) of both merger trees and halo catalogs. In addition, the method is able to robustly measure the self-consistency of halo finders; it is the first to directly measure the uncertainties in halo positions, halo velocities, and the halo mass function for a given halo finder based on actual cosmological simulations.</p>
+
+<p>The code&#39;s paper can be found <a href="http://arxiv.org/abs/1110.4372">here</a>. Documentation on getting it running and a more exhaustive documentation of the catalogue&#39;s content at its <a href="https://bitbucket.org/gfcstanford/rockstar">Bitbucket Repository</a>.</p>
+
+<h2 id="rockstar-and-iterative-unbinding">Rockstar and Iterative Unbinding</h2>
+
+<p><span style="font-family:Courier">Rockstar</span> is able to find any overdensity in 6D phase space including both halos and streams. To distinguish gravitationally bound halos from other phase space structures, <span style="font-family:Courier">Rockstar</span> performs a single-pass energy calculation to determine which particles are gravitationally bound to the halo. Over-densities where at least 50% of
+the mass is gravitationally bound are considered halos, with the exact fraction a tuneable parameter <code>unbound_threshold</code> of the algorithm Behroozi et al. (2013).</p>
+
+<p>This definition is generally very effective at identifying halos and subhalos -- but it fails in two important situations. First, if a subhalo is experiencing significant tidal stripping, the 50% cutoff can remove a subhalo from the catalog that should actually exist. We have found that changing the cutoff can recover the missing subhalos, but the best value of the cutoff is not easily determined. Second, <span style="font-family:Courier">Rockstar</span> is occasionally <em>too</em> effective at finding substructure in our high resolution simulations. In particular, it often finds velocity substructures in the cores of our halos that are clearly spurious based on their mass accretion histories and density profiles. Importantly, these two issues do not just affect low mass subhalos, but they can also add or remove halos with \(V_{max}\) &gt; 25 km/s.</p>
+
+<p>Both of these problems can be alleviated by applying an iterative unbinding procedure. We have implemented such an iterative unbinding procedure within <span style="font-family:Courier">Rockstar</span>. At each iteration, we remove particles whose kinetic energy exceeds the potential energy from other particles in that iteration. The potential is computed with the <span style="font-family:Courier">Rockstar</span> Barnes-Hut method (see Appendix B of Behroozi et al. (2013). We iterate the unbinding until we obtain a self-bound set of particles. Halos are only considered resolved if they contain at least 20 self-bound particles. All halo properties are then computed as usual, but with the self-bound particles instead of the one-pass bound particles. The iterative unbinding recovers the missing subhalos and removes most but not all of the spurious subhalos. Across 13 of our <em>Caterpillar</em> halos, we recover 52 halos with subhalo masses above 10<sup>8</sup> \(M_\odot\) which would have otherwise been lost using the conventional <span style="font-family:Courier">Rockstar</span>. See <a href="http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1509.01255">Griffen et al. (2015)</a> for further details.</p>
+
+<h2 id="rockstar-properties">Rockstar Properties</h2>
+
+<p><span style="font-family:Courier">Rockstar</span> outputs a large number of halo properties.</p>
+
+<p><center></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">variable</th>
+<th>units</th>
+<th>definition</th>
+<th>notes</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center"><code>id</code></td>
+<td></td>
+<td>the ID number of the halo</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>posX</code></td>
+<td>Mpc/h</td>
+<td>comoving x-position</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>posY</code></td>
+<td>Mpc/h</td>
+<td>comoving y-position</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>posZ</code></td>
+<td>Mpc/h</td>
+<td>comoving z-position</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>pecVX</code></td>
+<td>km/s</td>
+<td>Peculiar x-dir velocity</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>pecVY</code></td>
+<td>km/s</td>
+<td>Peculiar y-dir velocity</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>pecVZ</code></td>
+<td>km/s</td>
+<td>Peculiar z-dir velocity</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>corevelX</code></td>
+<td>km/s</td>
+<td>x-dir core velocity</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>corevelY</code></td>
+<td>km/s</td>
+<td>y-dir core velocity</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>corevelZ</code></td>
+<td>km/s</td>
+<td>z-dir core velocity</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>bulkvelX</code></td>
+<td>comoving km/s</td>
+<td>x-dir bulk velocity</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>bulkvelY</code></td>
+<td>comoving km/s</td>
+<td>y-dir bulk velocity</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>bulkvelZ</code></td>
+<td>comoving km/s</td>
+<td>z-dir bulk velocity</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>mvir</code></td>
+<td>Msol/h</td>
+<td>virial mass set by <a href="http://cdsads.u-strasbg.fr/abs/1998ApJ...495...80B">Bryan &amp; Norman (1998)</a> prescription</td>
+<td>this should only be used for the massive host halos - it is best to just use <code>mgrav</code></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>mgrav</code></td>
+<td>Msol/h</td>
+<td>virial mass set by <a href="http://cdsads.u-strasbg.fr/abs/1998ApJ...495...80B">Bryan &amp; Norman (1998)</a> prescription</td>
+<td>when using the catalogues, only use this quantity as it is the gravitationally bound mass of the halo - especially for subhalos</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>rvir</code></td>
+<td>kpc/h</td>
+<td>virial radius set by <a href="http://cdsads.u-strasbg.fr/abs/1998ApJ...495...80B">Bryan &amp; Norman (1998)</a> prescription</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>child_r</code></td>
+<td></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>vmax_r</code></td>
+<td>km/s</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>mgrav</code></td>
+<td>Msol/h</td>
+<td>gravitational mass</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>vmax</code></td>
+<td>km/s</td>
+<td>Maximum circular velocity</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>rvmax</code></td>
+<td>kpc/h</td>
+<td>radius at maximum circular velocity</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>rs</code></td>
+<td>kpc/h</td>
+<td>NFW scale radius</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>rs_klypin</code></td>
+<td>kpc/h</td>
+<td>Klypin defined scale radius</td>
+<td>better for smaller halos</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>vrms</code></td>
+<td>km/s</td>
+<td>rms velocity</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>Jx</code></td>
+<td></td>
+<td>x-component angular momentum</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>Jy</code></td>
+<td></td>
+<td>y-component angular momentum</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>Jz</code></td>
+<td></td>
+<td>z-component angular momentum</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>Epot</code></td>
+<td></td>
+<td>Potential energy of the halo</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>spin</code></td>
+<td></td>
+<td>Peebles defined spin parameter</td>
+<td>This should only be used for halos with a large number of particles (~500+)</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>spin_bullock</code></td>
+<td></td>
+<td>Bullock&#39;s modified spin parameter</td>
+<td>See above.</td>
+</tr>
+<tr>
+<td style="text-align: center"><code>xoff</code></td>
+<td></td>
+<td>Position offset parameter abs(center of mass position - halo position)</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>voff</code></td>
+<td></td>
+<td>Velocity offset parameter abs(center of mass velocity - halo velocity)</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>b_to_a</code></td>
+<td></td>
+<td>Halo ellipticity b/a</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>c_to_a</code></td>
+<td></td>
+<td>Halo ellipticity c/a</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>b_to_a2</code></td>
+<td></td>
+<td>Halo ellipticity b/a (different prescription)</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>c_to_a2</code></td>
+<td></td>
+<td>Halo ellipticity c/a (different prescription)</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>A[x]</code></td>
+<td></td>
+<td>x-axis for ellipticity a</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>A[y]</code></td>
+<td></td>
+<td>y-xis for ellipticity a</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>A[z]</code></td>
+<td></td>
+<td>z-xis for ellipticity a</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>A2[x]</code></td>
+<td></td>
+<td>x-axis for ellipticity a (different prescription)</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>A2[y]</code></td>
+<td></td>
+<td>y-xis for ellipticity a (different prescription)</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>A2[z]</code></td>
+<td></td>
+<td>z-xis for ellipticity a (different prescription)</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>T/abs(U)</code></td>
+<td></td>
+<td>Virial ratio (kinetic/abs(potential))</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>min_pos_err</code></td>
+<td></td>
+<td>Minimum error in position</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>min_vel_err</code></td>
+<td></td>
+<td>Minimum error in bulk velocity</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>min_bulkvel_err</code></td>
+<td></td>
+<td>Minimum bulk velocity error.</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>total_npart</code></td>
+<td></td>
+<td>The total number of particles associated with this halo (subs included)</td>
+<td></td>
+</tr>
+<tr>
+<td style="text-align: center"><code>npart</code></td>
+<td></td>
+<td>The number of particles associated with a halo (does not include subhalos)</td>
+<td></td>
+</tr>
+</tbody></table>
+
+<p></center></p>
+
+<h2 id="rockstar-full-particles-binary">Rockstar Full Particles Binary</h2>
+
+<p>Summary of changes for full particle binary output. 8/19/2014 (Alex Ji)</p>
+
+<p>Alex added a <span style="font-family:Courier">Rockstar</span> option to be able to output in binary all of the particle ids belonging to each halo. This means there is no need to recursively get particles from subhalos in <code>RSDataReader</code>. It also means particles from subhalo fof groups that were deemed unbound or too small, and hence not previously written out, are now correctly written out to the halo they should belong to.</p>
+
+<p>Usage: Compiling When compiling <span style="font-family:Courier">Rockstar</span>, use the command % make full_particle_binary This automatically compiles with HDF5 also.</p>
+
+<h3 id="config-file">Config File</h3>
+
+<p>In the <span style="font-family:Courier">Rockstar</span> config file, specify <code>FULL_PARTICLE_BINARY = num processors</code> to write out full binary files This should be set to the same as <code>NUM_WRITERS</code>. It could be less, but I don&#39;t see any reason for that.
+Also specify <code>DELETE_BINARY_OUTPUT_AFTER_FINISHED = 1</code> This deletes the standard .bin files. The new files contain all of the same info as the old .bin files, so they are just a waste of space.</p>
+
+<h3 id="reading-data">Reading Data</h3>
+
+<p>Use <code>RSDataReader.py</code> version 7. There is now a new parameter called <code>total_npart</code> which specifies the total number of particles belonging to a halo, including substructure. </p>
+
+<ul>
+<li><code>get_particles_from_halo()</code> will now return all particles from a halo. </li>
+<li><code>get_all_particles_from_halo()</code> returns exactly the same thing in version=7. T</li>
+</ul>
+
+<p>he first “npart” particles from any given halo are exactly the same particles you would have gotten in the original <span style="font-family:Courier">Rockstar</span> output. The extra particles after that are the ones we were after.</p>
+
+<ul>
+<li>the files now end with the extension <code>.fullbin</code> instead of <code>.bin</code></li>
+</ul>
+
+<p>They are ~10% larger due to the extra particles.</p>
+
+<h3 id="changes-to-rockstar-code">Changes to Rockstar code</h3>
+
+<p>Files Modified: <code>config.template.h Makefile halo.h properties.c meta_io.c io_internal.c io_internal.h</code>
+In config file, will need to specify <code>FULL_PARTICLE_BINARY = num processors</code> to write out full binary files This config option is now added to config.template.h and by default set to 0.
+When compiling, specify the option: <code>$ make full_particle_binary</code> defines the flag <code>FULL_PARTICLE_BINARY_FLAG</code> This will compile a version such that the halo struct has an extra parameter total_num_p, found in <code>halo.h</code>. It will also compile with hdf5 since this is the case we most often want. <code>total_num_p</code> is assigned in <code>properties.c</code> in the function <code>calc_additional_halo_props()</code> This corresponds to the total number of particles belonging to the halo, including particles assigned to fof groups that were not printed out (for being unbound, too small, etc.) The extra parameter for each halo needs to be read in with <code>RSDataReader.py</code> version 7. it is named &#39;total_npart&#39; for now.
+In the file <code>meta_io.c</code>, in the function output_halos() Added another if statement that calls <code>output_full_particles_binary()</code> to print data as we want it. Function called only if <code>FULL_PARTICLE_BINARY &gt; 0</code> as specified in config file.
+Wrote <code>output_full_particles_binary()</code> to <code>io_internal.c</code>. It is just like <code>output_binary()</code> except it uses a recursive function, <code>print_child_particles_binary()</code> to print all of the particles, not just <code>num_p</code> of them. Declared <code>output_full_particles_binary()</code> in <code>io_internal.h</code></p>
+
+<p><code>print_child_particles_binary()</code> in <code>io_internal.c</code> is my function which is a modification of <code>print_child_particles()</code> to recursively trace child halos and print their particles ids to binary, not ascii. <code>print_child_particles_binary()</code> did not need to be declared in any header file. Just written in file before function that calls it.
+Output files will now be named <code>halos_x.y.fullbin</code> x is the snap number y is the chunk number. Ranges from 0 to FULL_PARTICLES_BINARY-1</p>
+
+<p>In the halo output, <code>p_start</code> corresponds to the starting position in the particle array p of the processor it is on where particles are belonging to that halo. We write this out as <code>numstart</code> in <code>RSDataReader</code>. It was not used before, and now shouldn&#39;t ever be used.</p>
+
+<p>At the moment, <code>cat.total_particles</code> will not be truly accurate. It will refer to the sum of npart of every halo. It would be easy to change this to refer to the sum of <code>total_npart</code> for each halo in <code>RSDataReader</code>. I don&#39;t see a good use for <code>cat.total_particles</code> either way though. The binary header information will specify num_particles as the sum of <code>npart</code>, or <code>num_p</code>. Changing this is a bad idea, as it will break other parts of how <span style="font-family:Courier">Rockstar</span> is run. To specify a different particle count, such as number of unique particles written to file, or sum of <code>total_num_p</code>, would require an extra parameter to the <code>struct binary_output_header</code>, or to change <code>num_particles</code> just in the output. I don&#39;t see a good use for this right now.</p>
+
+<p>Another note: Files are not written out in order to keep halo ids written out in order. Ex: halos.0.bin might write halos 0 – 250 <code>halos.1.bin</code> would write out halos 1001-1250 and <code>halos.2.bin</code> would write out halos 251-500. This means the unsorted data[i] array in <code>RSDataReader</code> will not always have the property that <code>data[i]</code> is the halo of <code>id = i</code>.</p>
+
+<h2 id="running-rockstar/p-gadget3">Running Rockstar/P-Gadget3</h2>
+
+<p>This will be a brief tutorial on running <span style="font-family:Courier">Rockstar</span>/<span style="font-family:Courier">P-Gadget3</span> using code developed by the MIT group (Brendan, Alex, Greg). </p>
+
+<p>So you have a Gadget simulation output and you want to run <span style="font-family:Courier">Rockstar</span> on it.</p>
+
+<p>First you&#39;ll need a working version of <span style="font-family:Courier">Rockstar</span> which works with the read modules that we will be using later. As of April 2014, the current version of <span style="font-family:Courier">Rockstar</span> (RC2+ with hdf5 support) works with our modules. Be sure to also get <code>consistent-trees-0.9.9.2</code>.</p>
+
+<ol>
+<li>Go to your <span style="font-family:Courier">Rockstar</span>-hdf5 directory and run &quot;make with_hdf5&quot;. If it breaks, you need to point to the hdf5 libraries on your system.</li>
+</ol>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">HDF5_FLAGS</span> <span class="o">=</span> -DH5_USE_16_API -lhdf5 -DENABLE_HDF5 -I/bigbang/data/bgriffen/lib/hdf5-1.8.10/include -L/bigbang/data/bgriffen/lib/hdf5-1.8.10/lib -lhdf5 -lz
+</code></pre></div>
+<ol>
+<li><p>Go to your consistent-trees directory and run &quot;make all&quot;.</p></li>
+<li><p>Make a folder inside your <span style="font-family:Courier">Rockstar</span>-hdf5/ directory called &quot;cfgs&quot; where you will put your cfg files.</p></li>
+</ol>
+
+<p>The parent simulation configuration file (parent.cfg) for the MIT halos looks like:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="nv">PARALLEL_IO</span> <span class="o">=</span> 1
+<span class="nv">PARALLEL_IO_SERVER_INTERFACE</span> <span class="o">=</span> <span class="s2">&quot;ib0&quot;</span>
+<span class="nv">FORK_READERS_FROM_WRITERS</span> <span class="o">=</span> 1
+<span class="nv">FORK_PROCESSORS_PER_MACHINE</span> <span class="o">=</span> 16
+<span class="nv">NUM_WRITERS</span> <span class="o">=</span> 128
+<span class="nv">INBASE</span> <span class="o">=</span> /bigbang/data/AnnaGroup/caterpillar/parent/gL100X10/outputs
+<span class="nv">FILENAME</span> <span class="o">=</span> snapdir_&lt;snap&gt;/snap_&lt;snap&gt;.&lt;block&gt;.hdf5 
+<span class="nv">NUM_BLOCKS</span> <span class="o">=</span> <span class="m">256</span>                       
+<span class="nv">FILE_FORMAT</span> <span class="o">=</span> <span class="s2">&quot;AREPO&quot;</span>            
+<span class="nv">FULL_PARTICLE_CHUNKS</span> <span class="o">=</span> <span class="m">1</span>             
+<span class="nv">OUTBASE</span><span class="o">=</span>/bigbang/data/AnnaGroup/caterpillar/parent/gL100X10/Rockstar
+<span class="nv">AREPO_LENGTH_CONVERSION</span><span class="o">=</span>1
+<span class="nv">AREPO_MASS_CONVERSION</span><span class="o">=</span>1e+10
+<span class="nv">SNAPSHOT_NAMES</span><span class="o">=</span>/bigbang/data/AnnaGroup/caterpillar/parent/gL100X10/Rockstar/snapparent.dat
+<span class="nv">FORCE_RES</span><span class="o">=</span>0.002
+<span class="nv">OUTPUT_FORMAT</span> <span class="o">=</span> <span class="s2">&quot;BOTH&quot;</span>
+</code></pre></div>
+<p>You&#39;ll have to modify this to suite your needs. This is suited for infiniband using 16 cores per machine and <code>NUM_WRITERS = Nnodes*Ncores</code> being used. <code>NUM_BLOCKS</code> is also for the number of input files for a given snapshot which you specified for Gadget. You can leave it as <code>AREPO</code> as this is just default for using the HDF5 snapshots. You just need to make sure you set the <code>LENGTH</code> and <code>MASS</code> conversions correctly. The ones above are native for <code>P-Gadget3</code>. Be also sure to get <code>FORCE_RES</code> or force softening correct. Here we use 1/40 times the mean inter-particle separation or (1/40)*boxwidth/(np)^(1/3) which in our case is 100/2^10/40 ~ 0.002. If you have the space, I would suggest leaving OUTPUT_FORMAT to be BOTH. You can clean up the files you don&#39;t want later. Snapshot names is just a file listing the snapshot names <code>000,001,002 ...</code> up to the number of snaps, 127 in this case.</p>
+
+<ol>
+<li>You will then have to submit the <span style="font-family:Courier">Rockstar</span> run to the cluster. For a cluster like Stampede or other SLURM build systems you can adapt the following:</li>
+</ol>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c">#!/bin/bash</span>
+<span class="c">#SBATCH -o parentrock.o%j</span>
+<span class="c">#SBATCH -e parentrock.e%j</span>
+<span class="c">#SBATCH -t 48:00:00</span>
+<span class="c">#SBATCH -p normal</span>
+<span class="c">#SBATCH --mail-user=bgriffen@mit.edu</span>
+<span class="c">#SBATCH -J parentrock</span>
+<span class="c">#SBATCH --mail-type=ALL</span>
+<span class="c">#SBATCH -n 512</span>
+
+module load hdf5
+
+<span class="nv">rsdir</span><span class="o">=</span>/home1/02670/bgriffen/Rockstar
+<span class="nv">exe</span><span class="o">=</span>/home1/02670/bgriffen/Rockstar/rockstar
+
+<span class="nb">cd</span> <span class="nv">$rsdir</span>
+<span class="nv">outdir</span><span class="o">=</span>/scratch/02670/bgriffen/gL100X10/Rockstar
+
+<span class="nv">$exe</span> -c <span class="nv">$rsdir</span>/cfgs/parent.cfg <span class="p">&amp;</span>
+<span class="c">#$exe -c $outdir/restart.cfg &amp; #only use for restarting the run, comment line above.</span>
+<span class="nb">cd</span> <span class="nv">$outdir</span>
+perl -e <span class="s1">&#39;sleep 1 while (!(-e &quot;auto-rockstar.cfg&quot;))&#39;</span>
+srun -n <span class="m">512</span> <span class="nv">$exe</span> -c auto-rockstar.cfg
+</code></pre></div>
+<p>If you are running on PBS, please email <a href="brendan.f.griffen@gmail.com">Brendan Griffen</a> for a PBS version which works just as well.</p>
+
+
+<div class="tags">
+    
+    <b>Tags: </b>
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2015 Caterpillar Project. All rights reserved.<br />
+<p>Page last updated:</span> November 2, 2015<br/> Site last generated: Nov 3, 2015 <br />
+<p><img src="images/company_logo.jpg"/></p>
+                </div>
+            </div>
+        </footer>
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+            </div><!-- /.row -->
+
+    </div>    <!-- /.container -->
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-61923556-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</html>
+

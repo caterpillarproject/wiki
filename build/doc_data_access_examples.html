@@ -1,0 +1,912 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Here are some examples to get you started working with the Caterpillar data.">
+<meta name="keywords" content="examplespythoncodeaccess,  ">
+<title>Data Access Examples  | Caterpillar Wiki</title>
+<link rel="stylesheet" type="text/css" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/modern-business.css">
+<link rel="stylesheet" type="text/css" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<link rel="stylesheet" type="text/css" href="css/theme-blue.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+
+
+  </head>
+
+<body>
+
+   <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+           
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> The Caterpillar Project Wiki</span></a>
+            
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                <li><a href="https://github.com/caterpillarproject/wiki" target="_blank">Github</a></li>
+                
+                
+                
+                
+
+
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+
+                <li class="dropdown">
+                    
+
+
+                <!-- special insertion -->
+
+               
+                <!-- Send feedback function -->
+<script>
+function SendLinkByMail(href) {
+var subject= "Caterpillar Wiki feedback";
+var body = "I have some feedback about the Data Access Examples page: ";
+body += window.location.href;
+body += "";
+var uri = "mailto:brendan.f.griffen@gmail.com?subject=";
+uri += encodeURIComponent(subject);
+uri += "&body=";
+uri += encodeURIComponent(body);
+window.location.href = uri;
+}
+</script>
+
+<li><a href="javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B" target="_blank"><i class="fa fa-envelope-o"></i> Feedback</a></li>
+
+
+                <li>
+                <!-- start search -->
+                <div id="search-demo-container">
+                <input type="text" id="search-input" placeholder="search...">
+                <ul id="results-container"></ul>
+                </div>
+                <script src="js/jekyll-search.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                SimpleJekyllSearch.init({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                dataSource: 'search.json',
+                searchResultTemplate: '<li><a href="{url}" title="Data Access Examples">{title}</a></li>',
+                noResultsText: 'No results found.',
+                limit: 10,
+                fuzzy: true,
+                })
+                </script>
+                <!-- end search -->
+                </li>
+
+                
+<script type="text/javascript">
+
+    $( document ).ready(function() {
+        if (top.location == location)  {
+            $(".escapeMe").remove();
+        }
+
+    });
+
+            function breakout_of_frame() {
+                if (top.location != location) {
+                    window.open(window.location.href, '_blank');
+
+                }
+
+            }
+</script>
+
+<li class="escapeMe">
+    <a href="#" onclick="breakout_of_frame()" ><i class="fa fa-sign-out"></i> Pop-out</a>
+</li>
+
+
+
+        <!-- /.container -->
+                </ul>
+
+
+</div></nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+
+
+<!-- Content Row -->
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-md-3">
+
+        <script>
+
+            $(document).ready(function() {
+                        // Initialize navgoco with default options
+                        $("#mysidebar").navgoco({
+                            caretHtml: '',
+                            accordion: true,
+                            openClass: 'active', // open
+                            save: false, // leave false or nav highlighting doesn't work right
+                            cookie: {
+                                name: 'navgoco',
+                                expires: false,
+                                path: '/'
+                        },
+                        slide: {
+                            duration: 400,
+                            easing: 'swing'
+                                }
+                                });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+            });
+
+        </script>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        
+        <ul id="mysidebar" class="nav">
+            <center>
+        <img title="logo" src="images/company_logo_big.png" style="max-width: 200px;" align="center">
+        
+            <span class="versionTagline">version 0.1</span>
+            </center>
+
+            
+            
+            
+        
+            
+            <li><a href="#">Caterpillar</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="index.html">Welcome</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_history_motivation.html">History and Motiviation</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Simulation Overview</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_initial_conditions.html">Initial Conditions</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_parent_simulation.html">Parent Simulation</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_zoomin_simulations.html">Zoom-in Simulations</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Data Access</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_understanding_the_data.html">Understanding The Data</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_modules_and_analysis.html">Your Analysis Modules</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li class="active"><a href="doc_data_access_examples.html">Access Examples</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sams.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_datasets.html">Other Useful Postprocessed Datasets</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Codes & Halo Catalogues</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_gadget.html">Gadget</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_rockstar.html">Rockstar</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_consistenttrees.html">Consistent-Trees</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_subfind.html">SUBFIND</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Compute Cluster Information</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_mit_cluster.html">MIT - Antares & Bigbang</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_xsede.html">XSEDE - Stampede, Comet & Ranch</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_submitting_jobs.html">Submitting Jobs With SLURM</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Project Status</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_project_status.html">Halo Progress</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sam_progress.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_caterpillar_hydro.html">Caterpillar+Hydro</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Special Queries</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_faq.html">FAQ</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+        
+
+
+
+
+   <!-- if you aren't using the accordion, uncomment this block:
+
+        <p class="external">
+            <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+        </p>
+    -->
+
+    </div>
+       <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
+    <script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+            <!-- Content Column -->
+            <div class="col-md-9">
+
+                <div class="post-header">
+   <h1 class="post-title-main">Data Access Examples</h1>
+</div>
+
+<div class="post-content">
+
+   
+    <div class="summary">Here are some examples to get you started working with the Caterpillar data.</div>
+   
+
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+    <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/doc_data_access_examples.md" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+
+       <h2 id="overview">Overview</h2>
+
+<p>Here you&#39;ll find all sorts of information about analysing the Caterpillar halos. If you still aren&#39;t sure what to do after reading the documentation please send an email to <a href="mailto:brendan.f.griffen@gmail.com">Brendan Griffen</a>. Make sure you have setup your work environment correctly and obtained the necessary libraries.</p>
+
+<h2 id="examples-(under-construction)">Examples (under construction)</h2>
+
+<p>One example combining these two modules with some general inspection would look something like as follows:</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="kn">import</span> <span class="nn">brendanlib.grifflib</span> <span class="kn">as</span> <span class="nn">glib</span>
+<span class="kn">import</span> <span class="nn">haloutils</span> <span class="kn">as</span> <span class="nn">htils</span>
+
+<span class="c"># load the first 24 halos</span>
+<span class="c"># (just change 14 to 11 for the lower resolution halos)</span>
+
+<span class="n">hpaths</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_paper_paths_lx</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+
+<span class="c"># loop through all high-resolution halos</span>
+
+<span class="k">for</span> <span class="n">hpath</span> <span class="ow">in</span> <span class="n">hpaths</span><span class="p">:</span>
+
+    <span class="c"># strip down the path to just the halo id</span>
+
+    <span class="n">parentid</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_parent_hid</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+    <span class="c"># get the central host id of the zoom-in halo</span>
+    <span class="c"># parentid is named from the parent simulation </span>
+    <span class="c"># the zooms have different ids</span>
+
+    <span class="n">zoomid</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_zoomid</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+    <span class="c"># Return the pandas data frame with all the halos, </span>
+    <span class="c"># return mvir for example</span>
+
+    <span class="n">lastsnap</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_lastsnap</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+    <span class="n">halos</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_rscat</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">lastsnap</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">mvir_host</span> <span class="o">=</span> <span class="n">halos</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">zoomid</span><span class="p">][</span><span class="s">&#39;mvir&#39;</span><span class="p">]</span> <span class="c"># units of Msol/h</span>
+
+    <span class="c"># get one specific parameter of the host at</span>
+    <span class="c"># z = 0 (quick version of above)</span>
+
+    <span class="n">mvir_host</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_quant_zoom</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="s">&#39;mvir&#39;</span><span class="p">)</span> <span class="c"># units of Msol/h</span>
+
+    <span class="c"># return all halo virial masses</span>
+
+    <span class="n">all_mvir</span> <span class="o">=</span> <span class="n">halos</span><span class="p">[</span><span class="s">&#39;mvir&#39;</span><span class="p">]</span> <span class="c"># units of Msol/h</span>
+
+    <span class="c"># get the merger tree of the host and all its subs</span>
+
+    <span class="n">cat</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_mtc</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">haloids</span><span class="o">=</span><span class="p">[</span><span class="n">zoomid</span><span class="p">])</span>
+
+    <span class="c"># read in every halo&#39;s merger tree</span>
+
+    <span class="n">all_trees</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_mtc</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">indexbyrsid</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+    <span class="n">tree</span> <span class="o">=</span> <span class="n">all_trees</span><span class="p">[</span><span class="n">zoomid</span><span class="p">]</span> 
+
+    <span class="c"># if you feed more than one id to the above </span>
+    <span class="c"># it would be cat[0],cat[1] etc.</span>
+
+    <span class="c"># you can now access the main branch &gt; try tree. then tab complete to see other functions</span>
+    <span class="n">mainbranch</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getMainBranch</span><span class="p">()</span> 
+
+    <span class="c"># we also have a short hand version:</span>
+    <span class="c"># mainbranch = htils.get_mainbranch(hpath) </span>
+    <span class="c"># which is very fast and skips the reading of the entire progenitor tree if you don&#39;t need dit</span>
+    <span class="c"># see further down this page for more options</span>
+    <span class="c"># output the main branch virial mass</span>
+
+    <span class="k">print</span> <span class="n">mainbranch</span><span class="p">[</span><span class="s">&#39;mvir&#39;</span><span class="p">]</span> 
+</code></pre></div>
+<h3 id="functions-available-once-you&#39;ve-loaded-a-rockstar-catalogue">Functions Available Once You&#39;ve Loaded A Rockstar Catalogue</h3>
+
+<p>To load a rockstar catalogue for a given snapshot, you simple do:</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">rscat</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_rscat</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">snapshot</span><span class="p">,</span><span class="n">verbose</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</code></pre></div>
+<p>Once you do this you will have the ability to do the following kinds of tasks (<code>rscat.</code> then tab complete):</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"> <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="nb">dir</span><span class="p">,</span> <span class="n">snap_num</span><span class="p">,</span> <span class="n">version</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">sort_by</span><span class="o">=</span><span class="s">&#39;mvir&#39;</span><span class="p">,</span> <span class="n">base</span><span class="o">=</span><span class="s">&#39;halos_&#39;</span><span class="p">,</span> <span class="n">digits</span><span class="o">=</span><span class="mi">2</span><span class="p">,</span> <span class="n">AllParticles</span><span class="o">=</span><span class="bp">False</span><span class="p">):</span>
+   <span class="k">def</span> <span class="nf">get_particles_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">haloID</span><span class="p">):</span>
+       <span class="c"># @param haloID: id number of halo. Not its row position in matrix</span>
+       <span class="c"># @return: a list of particle IDs in the Halo</span>
+   <span class="k">def</span> <span class="nf">get_subhalos_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloID</span><span class="p">):</span>
+       <span class="c">#Retrieve subhalos only one level deep.</span>
+       <span class="c">#Does not get sub-sub halos, etc.</span>
+   <span class="k">def</span> <span class="nf">get_subhalos_from_halos</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloIDs</span><span class="p">):</span>
+       <span class="c">#Returns an array of pandas data frames of subhalos. one data frame</span>
+       <span class="c">#for each host halo. returns only first level of subhalos.</span>
+   <span class="k">def</span> <span class="nf">get_subhalos_from_halos_flat</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloIDs</span><span class="p">):</span>
+       <span class="c">#Returns a flattened pandas data frame of all subhalos within</span>
+       <span class="c">#the hosts given by haloIDs. Returns only first level of subhalos.</span>
+   <span class="k">def</span> <span class="nf">get_hosts</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+       <span class="c"># Get host halo frame only</span>
+   <span class="k">def</span> <span class="nf">get_subs</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+       <span class="c"># Get subhalo frame only</span>
+   <span class="k">def</span> <span class="nf">get_all_subs_recurse</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloID</span><span class="p">):</span>
+       <span class="c"># Retrieve all subhalos: sub and sub-sub, etc. </span>
+       <span class="c"># just need mask of all subhalos, then return data frame subset</span>
+   <span class="k">def</span> <span class="nf">get_all_subhalos_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloID</span><span class="p">):</span>
+       <span class="c"># Retrieve all subhalos: sub and sub-sub, etc.</span>
+       <span class="c"># return pandas data frame of subhalos</span>
+   <span class="k">def</span> <span class="nf">get_all_sub_particles_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloID</span><span class="p">):</span>
+       <span class="c">#returns int array of particle IDs belonging to all substructure</span>
+       <span class="c">#within host of haloID</span>
+   <span class="k">def</span> <span class="nf">get_all_particles_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloID</span><span class="p">):</span>
+       <span class="c">#returns int array of all particles belonging to haloID</span>
+   <span class="k">def</span> <span class="nf">get_all_num_particles_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">haloID</span><span class="p">):</span>
+       <span class="c"># Get the actual number of particles &#39;total_npart&#39; from halo as opposed to &#39;npart&#39;.</span>
+       <span class="c"># mainly for versions less than 7</span>
+   <span class="k">def</span> <span class="nf">get_block_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">snapshot_dir</span><span class="p">,</span> <span class="n">haloID</span><span class="p">,</span> <span class="n">blockname</span><span class="p">,</span> <span class="n">allparticles</span><span class="o">=</span><span class="bp">True</span><span class="p">):</span>
+       <span class="c"># quick load a block (hdf5 block) of particles belong to halo.</span>
+       <span class="c"># e.g. you want particle positions for haloid = 10 (use blockname=&quot;pos&quot;)</span>
+       <span class="c"># this works fastest on snapshots ordered by id and requires import readsnapHDF5_greg </span>
+   <span class="k">def</span> <span class="nf">H</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+       <span class="c">#returns hubble parameter for rockstar run</span>
+   <span class="k">def</span> <span class="nf">get_most_gravbound_particles_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">snapshot_dir</span><span class="p">,</span> <span class="n">haloID</span><span class="p">):</span>
+       <span class="c"># Gets most bound particles just based on potential energy for specific halo ID</span>
+   <span class="k">def</span> <span class="nf">get_most_bound_particles_from_halo</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">snapshot_dir</span><span class="p">,</span> <span class="n">haloID</span><span class="p">):</span>
+       <span class="c"># Gets most bound particles for halo based on pot. energy and kin. energy</span>
+       <span class="c"># if potential block does not exist, it is calculate assuming a spherical halo</span>
+   <span class="k">def</span> <span class="nf">getversion</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+       <span class="c"># returns the version of rockstar the run was done within</span>
+       <span class="c"># this will include versions made by Alex Ji, Greg Dooley &amp; Brendan Griffen</span>
+</code></pre></div>
+<p>Here is an example of some of these in action:</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># load required modules</span>
+
+<span class="kn">import</span> <span class="nn">haloutils</span> <span class="kn">as</span> <span class="nn">htils</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="c"># select the caterpillar halo of interest</span>
+
+<span class="n">want_cat_sim</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c"># select the last snapshot (z = 0)</span>
+<span class="n">snapshot</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_lastsnap</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+<span class="c"># load rockstar id of the host halo</span>
+
+<span class="n">zoomid</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_zoomid</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+<span class="c"># get the directory path for this halo</span>
+
+<span class="n">hpaths</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_paper_paths_lx</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">hpath</span> <span class="o">=</span> <span class="n">hpaths</span><span class="p">[</span><span class="n">want_cat_sim</span><span class="o">-</span><span class="mi">1</span><span class="p">]</span>
+
+<span class="c">#Load Halos</span>
+
+<span class="n">halos</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_rscat</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">snapshot</span><span class="p">)</span>
+
+<span class="c">#Select host halos</span>
+
+<span class="n">hosts</span> <span class="o">=</span> <span class="n">halos</span><span class="o">.</span><span class="n">get_hosts</span><span class="p">()</span>
+
+<span class="c">#Select subhalos</span>
+
+<span class="n">subs</span> <span class="o">=</span> <span class="n">halos</span><span class="o">.</span><span class="n">get_subs</span><span class="p">()</span>
+
+<span class="c"># Get positions of subs and hosts</span>
+
+<span class="k">print</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">hosts</span><span class="o">.</span><span class="n">posX</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">hosts</span><span class="o">.</span><span class="n">posY</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">hosts</span><span class="o">.</span><span class="n">posZ</span><span class="p">)</span> 
+<span class="k">print</span> <span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">subs</span><span class="o">.</span><span class="n">posX</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">subs</span><span class="o">.</span><span class="n">posY</span><span class="p">),</span><span class="n">np</span><span class="o">.</span><span class="n">array</span><span class="p">(</span><span class="n">subs</span><span class="o">.</span><span class="n">posZ</span><span class="p">)</span> 
+
+<span class="c">#Get particle ids from halo of interest (here it is the host)</span>
+
+<span class="k">print</span> <span class="n">halos</span><span class="o">.</span><span class="n">get_particles_from_halo</span><span class="p">(</span><span class="n">zoomid</span><span class="p">)</span> 
+
+<span class="c">#Get virial radius of a specific halo id</span>
+
+<span class="k">print</span> <span class="n">halos</span><span class="o">.</span><span class="n">ix</span><span class="p">[</span><span class="n">zoomid</span><span class="p">][</span><span class="s">&#39;rvir&#39;</span><span class="p">]</span> <span class="c"># units of kpc/h</span>
+</code></pre></div>
+<h3 id="merger-tree-manipulation">Merger Tree Manipulation</h3>
+
+<p>Similarly the merger tree catalogues (once loaded) have a number of its own functions.</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="k">def</span> <span class="nf">getMainBranch</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="o">=</span><span class="mi">0</span><span class="p">):</span>
+   <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">   @param row: row of the halo you want the main branch for. Defaults to row 0</span>
+<span class="sd">   Uses getSubTree, then finds the smallest dfid that has no progenitors</span>
+<span class="sd">   @return: all halos that are in the main branch of the halo specified by row (in a np structured array)</span>
+<span class="sd">   &quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">getMMP</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">row</span><span class="p">):</span>
+   <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">   @param row: row number (int) of halo considered</span>
+<span class="sd">   @return: row number of the most massive parent, or None if no parent</span>
+<span class="sd">   &quot;&quot;&quot;</span>
+<span class="k">def</span> <span class="nf">getNonMMPprogenitors</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span><span class="n">row</span><span class="p">):</span>
+   <span class="sd">&quot;&quot;&quot;</span>
+<span class="sd">   return row index of all progenitors that are not the most massive</span>
+<span class="sd">   These are all the subhalos that were destroyed in the interval</span>
+<span class="sd">   &quot;&quot;&quot;</span>
+</code></pre></div>
+<p>These can be used in the following example:</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># load required modules</span>
+
+<span class="kn">import</span> <span class="nn">haloutils</span> <span class="kn">as</span> <span class="nn">htils</span> 
+<span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
+
+<span class="c"># select the caterpillar halo of interest</span>
+
+<span class="n">want_cat_sim</span> <span class="o">=</span> <span class="mi">5</span>
+
+<span class="c"># select the last snapshot (z = 0)</span>
+<span class="n">snapshot</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_lastsnap</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+<span class="c"># load rockstar id of the host halo</span>
+
+<span class="n">zoomid</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_zoomid</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+<span class="c"># Load every tree (VERY slow)</span>
+
+<span class="n">trees</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_mtc</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+<span class="c"># Just look at the first tree</span>
+<span class="c"># tree = cat[0]</span>
+<span class="c"># You can access all trees via: cat[0], cat[1] etc.</span>
+
+<span class="c"># If you want to load the tree for a particular ID from the rockstar catalogue</span>
+
+<span class="n">trees</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_mtc</span><span class="p">(</span><span class="n">haloids</span><span class="o">=</span><span class="p">[</span><span class="n">zoomid</span><span class="p">])</span> <span class="c"># in this case the host (quite slow) </span>
+<span class="n">tree</span> <span class="o">=</span> <span class="n">cat</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span> <span class="c"># tree will contain all progenitors, including subhalos</span>
+
+<span class="c"># Just say you want to index the merger tree by the z = 0 root rockstar id </span>
+<span class="c"># (i.e. the base of the tree). This is quite powerful because you might select</span>
+<span class="c"># halos of interest in the rockstar catalogue then want to know, just for those</span>
+<span class="c"># what their merger tree is (e.g. say you just want dwarf systems of a particular size)</span>
+
+<span class="n">trees</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_mtc</span><span class="p">(</span><span class="n">haloids</span><span class="o">=</span><span class="p">[</span><span class="n">zoomid</span><span class="p">],</span><span class="n">indexbyrsid</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span> 
+<span class="n">tree</span> <span class="o">=</span> <span class="n">trees</span><span class="p">[</span><span class="n">zoomid</span><span class="p">]</span>
+
+<span class="c"># You can just loop through rockstar ids (if you gave it more than one id above)</span>
+<span class="c"># and get out the accretion histories for a small sample of trees quite quickly</span>
+
+<span class="c"># to get the main branch</span>
+
+<span class="n">main_branch</span> <span class="o">=</span> <span class="n">tree</span><span class="o">.</span><span class="n">getMainBranch</span><span class="p">()</span>
+
+<span class="c"># print mass evolution</span>
+<span class="k">for</span> <span class="n">mass</span><span class="p">,</span><span class="n">scale</span> <span class="ow">in</span> <span class="nb">zip</span><span class="p">(</span><span class="n">main_branch</span><span class="p">[</span><span class="s">&#39;mvir&#39;</span><span class="p">],</span><span class="n">main_branch</span><span class="p">[</span><span class="s">&#39;scale&#39;</span><span class="p">]):</span>
+   <span class="k">print</span> <span class="s">&quot;</span><span class="si">%3.2f</span><span class="s">: </span><span class="si">%3.2e</span><span class="s">&quot;</span> <span class="o">%</span> <span class="p">(</span><span class="n">scale</span><span class="p">,</span><span class="n">mass</span><span class="p">)</span>
+
+<span class="c"># output</span>
+<span class="mf">1.00</span><span class="p">:</span> <span class="mf">2.86e+14</span> 
+<span class="mf">0.99</span><span class="p">:</span> <span class="mf">2.89e+14</span> 
+<span class="mf">0.98</span><span class="p">:</span> <span class="mf">2.90e+14</span> 
+<span class="mf">0.97</span><span class="p">:</span> <span class="mf">2.90e+14</span> 
+<span class="mf">0.95</span><span class="p">:</span> <span class="mf">2.88e+14</span> 
+<span class="mf">0.94</span><span class="p">:</span> <span class="mf">2.86e+14</span> 
+<span class="mf">0.93</span><span class="p">:</span> <span class="mf">2.83e+14</span> 
+<span class="mf">0.92</span><span class="p">:</span> <span class="mf">2.80e+14</span> 
+<span class="mf">0.91</span><span class="p">:</span> <span class="mf">2.76e+14</span> 
+<span class="mf">0.90</span><span class="p">:</span> <span class="mf">2.73e+14</span> 
+<span class="mf">0.89</span><span class="p">:</span> <span class="mf">2.64e+14</span> 
+<span class="mf">0.88</span><span class="p">:</span> <span class="mf">2.47e+14</span> <span class="o">...</span> 
+</code></pre></div>
+<h2 id="accessing-particle-data">Accessing Particle Data</h2>
+
+<p>If you want the Gadget header:</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="c"># get a random halo</span>
+<span class="n">hpaths</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_paper_paths_lx</span><span class="p">(</span><span class="mi">14</span><span class="p">)</span>
+<span class="n">hpath</span> <span class="o">=</span> <span class="n">hpaths</span><span class="p">[</span><span class="mi">0</span><span class="p">]</span>
+
+<span class="n">header</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">get_halo_header</span><span class="p">(</span><span class="n">hpath</span><span class="p">)</span>
+
+<span class="n">header</span><span class="o">.</span><span class="p">(</span><span class="n">tab</span> <span class="n">complet</span><span class="p">)</span>
+<span class="n">header</span><span class="o">.</span><span class="n">boxsize</span>        <span class="n">header</span><span class="o">.</span><span class="n">massarr</span>        <span class="n">header</span><span class="o">.</span><span class="n">omegaL</span>
+<span class="n">header</span><span class="o">.</span><span class="n">cooling</span>        <span class="n">header</span><span class="o">.</span><span class="n">metals</span>         <span class="n">header</span><span class="o">.</span><span class="n">redshift</span>
+<span class="n">header</span><span class="o">.</span><span class="n">double</span>         <span class="n">header</span><span class="o">.</span><span class="n">nall</span>           <span class="n">header</span><span class="o">.</span><span class="n">sfr</span>
+<span class="n">header</span><span class="o">.</span><span class="n">feedback</span>       <span class="n">header</span><span class="o">.</span><span class="n">nall_highword</span>  <span class="n">header</span><span class="o">.</span><span class="n">stellar_age</span>
+<span class="n">header</span><span class="o">.</span><span class="n">filenum</span>        <span class="n">header</span><span class="o">.</span><span class="n">npart</span>          <span class="n">header</span><span class="o">.</span><span class="n">time</span>
+<span class="n">header</span><span class="o">.</span><span class="n">hubble</span>         <span class="n">header</span><span class="o">.</span><span class="n">omega0</span> 
+</code></pre></div>
+<p>Be sure to divide the relevant quantities (pos, rvir etc.) by <code>header.hubble</code>. See the Gadget section in the sidebar for more information on the header and block types available.</p>
+
+<p>If you wanted to get the postions of all the particles for a specific halo (or any block). </p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">pos</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_partblock</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">zoomid</span><span class="p">,</span><span class="s">&quot;POS &quot;</span><span class="p">)</span> <span class="c"># units Mpc/h</span>
+<span class="c"># &quot;VEL &quot;, &quot;ID  &quot; also work (notice the space)</span>
+
+<span class="k">print</span> <span class="n">pos</span><span class="o">*</span><span class="mf">1000.</span> <span class="c"># kpc/h</span>
+
+<span class="c"># output</span>
+<span class="p">[</span> <span class="mf">32085.45117188</span>  <span class="mf">57312.79296875</span>  <span class="mf">44314.35546875</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">27002.18554688</span>  <span class="mf">10062.73242188</span>   <span class="mf">9899.70019531</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">26711.08789062</span>   <span class="mf">9560.22460938</span>  <span class="mf">10165.18847656</span><span class="p">]</span>
+<span class="p">[</span> <span class="mf">49757.3515625</span>   <span class="mf">21470.00195312</span>   <span class="mf">6461.90917969</span><span class="p">]</span>
+<span class="o">...</span>
+</code></pre></div>
+<p>If you wanted just the ids for a selection of particle ids:</p>
+<div class="highlight"><pre><code class="language-python" data-lang="python"><span class="n">pos</span> <span class="o">=</span> <span class="n">htils</span><span class="o">.</span><span class="n">load_partblock</span><span class="p">(</span><span class="n">hpath</span><span class="p">,</span><span class="n">zoomid</span><span class="p">,</span><span class="s">&quot;POS &quot;</span><span class="p">,</span><span class="n">partids</span><span class="o">=</span><span class="p">[</span><span class="n">listofids</span><span class="p">])</span> <span class="c"># units Mpc/h</span>
+</code></pre></div>
+
+<div class="tags">
+    
+    <b>Tags: </b>
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2015 Caterpillar Project. All rights reserved.<br />
+<p>Page last updated:</span> August 12, 2015<br/> Site last generated: Nov 3, 2015 <br />
+<p><img src="images/company_logo.jpg"/></p>
+                </div>
+            </div>
+        </footer>
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+            </div><!-- /.row -->
+
+    </div>    <!-- /.container -->
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-61923556-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</html>
+

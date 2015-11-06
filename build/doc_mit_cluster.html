@@ -1,0 +1,748 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Information relating to the compute cluster at MKI.">
+<meta name="keywords" content="clustercomputinghardwareslurmmitamd,  ">
+<title>MIT Compute Cluster  | Caterpillar Wiki</title>
+<link rel="stylesheet" type="text/css" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/modern-business.css">
+<link rel="stylesheet" type="text/css" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<link rel="stylesheet" type="text/css" href="css/theme-blue.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+
+
+  </head>
+
+<body>
+
+   <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+           
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> The Caterpillar Project Wiki</span></a>
+            
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                <li><a href="https://github.com/caterpillarproject/wiki" target="_blank">Github</a></li>
+                
+                
+                
+                
+
+
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+
+                <li class="dropdown">
+                    
+
+
+                <!-- special insertion -->
+
+               
+                <!-- Send feedback function -->
+<script>
+function SendLinkByMail(href) {
+var subject= "Caterpillar Wiki feedback";
+var body = "I have some feedback about the MIT Compute Cluster page: ";
+body += window.location.href;
+body += "";
+var uri = "mailto:brendan.f.griffen@gmail.com?subject=";
+uri += encodeURIComponent(subject);
+uri += "&body=";
+uri += encodeURIComponent(body);
+window.location.href = uri;
+}
+</script>
+
+<li><a href="javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B" target="_blank"><i class="fa fa-envelope-o"></i> Feedback</a></li>
+
+
+                <li>
+                <!-- start search -->
+                <div id="search-demo-container">
+                <input type="text" id="search-input" placeholder="search...">
+                <ul id="results-container"></ul>
+                </div>
+                <script src="js/jekyll-search.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                SimpleJekyllSearch.init({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                dataSource: 'search.json',
+                searchResultTemplate: '<li><a href="{url}" title="MIT Compute Cluster">{title}</a></li>',
+                noResultsText: 'No results found.',
+                limit: 10,
+                fuzzy: true,
+                })
+                </script>
+                <!-- end search -->
+                </li>
+
+                
+<script type="text/javascript">
+
+    $( document ).ready(function() {
+        if (top.location == location)  {
+            $(".escapeMe").remove();
+        }
+
+    });
+
+            function breakout_of_frame() {
+                if (top.location != location) {
+                    window.open(window.location.href, '_blank');
+
+                }
+
+            }
+</script>
+
+<li class="escapeMe">
+    <a href="#" onclick="breakout_of_frame()" ><i class="fa fa-sign-out"></i> Pop-out</a>
+</li>
+
+
+
+        <!-- /.container -->
+                </ul>
+
+
+</div></nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+
+
+<!-- Content Row -->
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-md-3">
+
+        <script>
+
+            $(document).ready(function() {
+                        // Initialize navgoco with default options
+                        $("#mysidebar").navgoco({
+                            caretHtml: '',
+                            accordion: true,
+                            openClass: 'active', // open
+                            save: false, // leave false or nav highlighting doesn't work right
+                            cookie: {
+                                name: 'navgoco',
+                                expires: false,
+                                path: '/'
+                        },
+                        slide: {
+                            duration: 400,
+                            easing: 'swing'
+                                }
+                                });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+            });
+
+        </script>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        
+        <ul id="mysidebar" class="nav">
+            <center>
+        <img title="logo" src="images/company_logo_big.png" style="max-width: 200px;" align="center">
+        
+            <span class="versionTagline">version 0.1</span>
+            </center>
+
+            
+            
+            
+        
+            
+            <li><a href="#">Caterpillar</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="index.html">Welcome</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_history_motivation.html">History and Motiviation</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Simulation Overview</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_initial_conditions.html">Initial Conditions</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_parent_simulation.html">Parent Simulation</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_zoomin_simulations.html">Zoom-in Simulations</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Data Access</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_understanding_the_data.html">Understanding The Data</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_modules_and_analysis.html">Your Analysis Modules</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_data_access_examples.html">Access Examples</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sams.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_datasets.html">Other Useful Postprocessed Datasets</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Codes & Halo Catalogues</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_gadget.html">Gadget</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_rockstar.html">Rockstar</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_consistenttrees.html">Consistent-Trees</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_subfind.html">SUBFIND</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Compute Cluster Information</a>
+                <ul>
+                    
+                    
+                    
+                    <li class="active"><a href="doc_mit_cluster.html">MIT - Antares & Bigbang</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_xsede.html">XSEDE - Stampede, Comet & Ranch</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_submitting_jobs.html">Submitting Jobs With SLURM</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Project Status</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_project_status.html">Halo Progress</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sam_progress.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_caterpillar_hydro.html">Caterpillar+Hydro</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Special Queries</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_faq.html">FAQ</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+        
+
+
+
+
+   <!-- if you aren't using the accordion, uncomment this block:
+
+        <p class="external">
+            <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+        </p>
+    -->
+
+    </div>
+       <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
+    <script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+            <!-- Content Column -->
+            <div class="col-md-9">
+
+                <div class="post-header">
+   <h1 class="post-title-main">MIT Compute Cluster</h1>
+</div>
+
+<div class="post-content">
+
+   
+    <div class="summary">Information relating to the compute cluster at MKI.</div>
+   
+
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+    <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/doc_mit_cluster.md" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+
+       <p>The MKI cluster (with respect to Caterpillar) at MIT has one login node (<code>antares.mit.edu</code>) which connects to a three primary blocks of slave nodes and one analysis node (<code>bigbang.mit.edu</code>). </p>
+
+<h2 id="compute-nodes-(for-farming-jobs)">Compute Nodes (for farming jobs)</h2>
+
+<h3 id="regnodes">RegNodes</h3>
+
+<p>Block 1:
+* 22 nodes (176 cores)
+* 8 core [2 Ghz]
+* 16GB memory
+* 1 Gbit interconnect</p>
+
+<p>Block 2:
+* 9 nodes (72 cores)
+* 8 cores, 2.5 Ghz
+* 16GB memory
+* 1 Gbit interconnect</p>
+
+<p>This partition should be used for <em>serial jobs</em>. All nodes can be accessed via using the partition <code>RegNodes</code>.</p>
+
+<h3 id="hypernodes">HyperNodes</h3>
+
+<ul>
+<li>12 nodes (144 cores)</li>
+<li>12 cores, 2.3 Ghz (24 with hyper-threading)</li>
+<li>24GB memory</li>
+<li>10 Gbit interconnect</li>
+</ul>
+
+<p>This partition should only be used for <em>MPI enabled</em> codes as it has faster interconnect.</p>
+
+<h3 id="amd64">AMD64</h3>
+
+<ul>
+<li>8 nodes, 512 cores</li>
+<li>64 cores, 2.2 Ghz</li>
+<li>256GB memory</li>
+<li>10 Gbit interconnect</li>
+</ul>
+
+<p>This partition should <em>only be used for extremely expensive runs which require 100GB++ memory and for codes that are MPI enabled</em>. You can also used openMP multi-threaded jobs which require large amounts of memory (1 job per node). At this stage, there are no time-limits or fixed memory limits for each of the nodes.</p>
+
+<h2 id="analysis-node-(for-plotting,-running-scripts-etc.)">Analysis Node (for plotting, running scripts etc.)</h2>
+
+<p>The Frebel group as MIT also has access to an analysis node which is connected to the Caterpillar data called <code>bigbang</code>. It can be accessed via ssh <code>username@bigbang.mit.edu</code>. See Data Access on this site to get started with your analysis once you understand the storage layout below.</p>
+
+<h3 id="storage-file-systems/servers">Storage File Systems/Servers</h3>
+
+<p>The Frebel group has access to ~120GB RAID storage and 300TB+ of ZFS tape storage. The ZFS tape storage consists of two 130TB servers (<code>grinder</code> and <code>cruncher</code>). These are significantly slower to do I/O from <em>the first time</em>. They each have solid state drives on them acting as a large cache which makes reading data comparable to the RAID drives if you are repeatedly accessing the same snapshot on the tape, for example. The directory structure is as follows:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">login node: ssh username@bigbang.mit.edu
+
+<span class="c"># ZFS TAPE STORAGE SERVERS (not as fast as the RAID  slow to load)</span>
+ -&gt; cruncher/
+  -&gt; caterpillar/
+   -&gt; parent/
+   -&gt; halos/
+    -&gt; H1079897/
+
+ -&gt; grinder/  <span class="c"># ZFS tape drive with </span>
+  -&gt; caterpillar/
+   -&gt; halos/
+    -&gt; H1387186
+    ...
+  -&gt; aquarius/
+   -&gt; Aq-A/
+   -&gt; Aq-B/
+   -&gt; Aq-C/
+   -&gt; Aq-D/
+   -&gt; Aq-E/
+   -&gt; Aq-F/
+
+<span class="c"># RAID STORAGE</span>
+ -&gt; data/AnnaGroup/     <span class="c"># RAID drive with all runs lower than LX14</span>
+  -&gt; caterpillar/
+   -&gt; halos/            <span class="c"># master folder with all of the caterpillar data within</span>
+    -&gt; H1079897/        <span class="c"># halos are named according to their folders</span>
+    ...
+   -&gt; ics/
+    -&gt; lagr/            <span class="c"># lagrangian volume files</span>
+   -&gt; parent/           <span class="c"># parent simulation runs</span>
+    -&gt; gL100X10/        <span class="c"># actual parent simulation (X10 refers to Level_max=10 in MUSIC)</span>
+</code></pre></div>
+<h3 id="current-storage-status">Current Storage Status</h3>
+
+<p>We are quite limited with storage space and so we ask you to request more storage if you need it. You will then be allocated a directory on <code>bigbang/data/{username}/</code>. The current break down of the storage capability is as follows:</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash">bigbang% df -h
+Filesystem            Size  Used Avail Use% Mounted on
+/dev/mapper/vg_bigbang-lv_home
+                       57G  1.9G   52G   4% /home
+/dev/mapper/vg_bigdata-lv_bigdata
+                      121T   93T   28T  78% /bigbang/data
+/cruncher/data
+                      127T  114T   14T  90% /cruncher/data
+/grinder/data
+                      127T   74T   54T  59% /grinder/data
+/spacebase/data
+                       36T   33M   36T   1% /spacebase/data
+</code></pre></div>
+<h1 id="where-is-the-data-actually-stored?">Where is the data <em>actually</em> stored?</h1>
+
+<p>Due to our storage limitations we have opted for the following strategy</p>
+
+<ul>
+<li>you should only ever get your hpaths from haloutils via <code>hpaths = haloutils.get_paper_paths_lx(14)</code>, for example. Do not get your halo paths from ever going into <code>caterpillar/halos/middle_mass_halos/*</code>.</li>
+<li>all simulation runs lower than LX14 (i.e. LX11,12,13) have been stored on the RAID drives.</li>
+<li>all LX14 runs are <em>symbolically linked</em> on the RAID drives but might not actually exist physically on the drives. 
+
+<ul>
+<li>all halo catalogues are on the RAID drives so access for these is very fast</li>
+<li>all particle data <em>except</em> the last snapshot are actually stored on the ZFS tape drives (though it will appear in outputs/ as a symlink)</li>
+<li>only the last snapshot of the particle data is actually stored on the RAID drives</li>
+<li>all postprocessed catalogues in <code>analysis/</code> of each halo directory are on the RAID drives</li>
+</ul></li>
+<li>all of the aquarius data is on the ZFS tape storage as this is not often used</li>
+<li>the parent simulation (<code>gL100X10</code>) is stored in the same way as the LX14 runs: only the last snapshot of the particle data is stored on the RAID drives, everything else is on the ZFS tape drives.</li>
+</ul>
+
+
+<div class="tags">
+    
+    <b>Tags: </b>
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2015 Caterpillar Project. All rights reserved.<br />
+<p>Page last updated:</span> November 3, 2015<br/> Site last generated: Nov 3, 2015 <br />
+<p><img src="images/company_logo.jpg"/></p>
+                </div>
+            </div>
+        </footer>
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+            </div><!-- /.row -->
+
+    </div>    <!-- /.container -->
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-61923556-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</html>
+

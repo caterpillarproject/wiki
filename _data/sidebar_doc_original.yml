@@ -1,0 +1,231 @@
+# Sidebar
+entries:
+- title: Sidebar
+  subcategories:
+    - title: Frontmatter
+      audience: writers, designers
+      platform: all
+      product: all
+      version: all
+      web: false
+      items:
+        - title: Title Page
+          url: /titlepage.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+          web: false
+          frontmatter: true
+
+        - title: Table of Contents
+          url: /tocpage.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+          web: false
+          frontmatter: true
+
+    - title: Caterpillar
+      audience: writers, designers
+      platform: all
+      product: all
+      version: all
+      print: true
+      items:
+
+        - title: Welcome
+          url: /index.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: History and Motiviation
+          url: /doc_history_motivation.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+    - title: Simulation Overview
+      audience: writers, designers
+      platform: all
+      product: all
+      version: all
+      print: true
+      items:
+
+        - title: Initial Conditions 
+          url: /doc_initial_conditions.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: Parent Simulation 
+          url: /doc_parent_simulation.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: Zoom-in Simulations
+          url: /doc_zoomin_simulations.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+    - title: Data Access 
+      audience: writers, designers
+      platform: all
+      product: all
+      version: all
+      print: true
+      items:
+
+        - title: Understanding The Data
+          url: /doc_understanding_the_data.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: Your Tools - Modules & Analysis
+          url: /doc_modules_and_analysis.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: Access Examples
+          url: /doc_data_access_examples.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: Semi-analytic Models
+          url: /doc_sams.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: Other Useful Postprocessed Datasets
+          url: /doc_datasets.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+    - title: Codes & Halo Catalogues
+      audience: writers, designers
+      platform: all
+      product: all
+      version: all
+      print: true
+      items:
+        - title: Gadget
+          url: /doc_gadget.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: Rockstar
+          url: /doc_rockstar.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: Consistent-Trees
+          url: /doc_consistenttrees.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: SUBFIND
+          url: /doc_subfind.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+
+    - title: Compute Cluster Information
+      audience: writers, designers
+      platform: all
+      product: all
+      version: all
+      print: true
+      items:
+
+        - title: MIT
+          url: /doc_mit_cluster.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: XSEDE Usage
+          url: /doc_xsede.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: Submitting Jobs
+          url: /doc_submitting_jobs.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+    - title: Project Status
+      audience: writers, designers
+      platform: all
+      product: all
+      version: all
+      print: true
+      items:
+
+        - title: Halo Progress
+          url: /doc_project_status.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: Semi-analytic Models
+          url: /doc_sam_progress.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+        - title: Caterpillar+Hydro
+          url: /doc_caterpillar_hydro.html
+          audience: writers, designers
+          platform: all
+          product: all
+          version: all
+
+    - title: Special Queries
+      audience: writers, designers
+      platform: all
+      product: all
+      version: all
+      print: true
+      items:
+
+          - title: FAQ
+            url: /doc_faq.html
+            audience: writers, designers
+            platform: all
+            product: all
+            version: all

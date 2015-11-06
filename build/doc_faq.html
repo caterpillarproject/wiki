@@ -1,0 +1,704 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Here you can find some frequently asked questions of the collaboration.">
+<meta name="keywords" content="faq,  frequently asked questions, FAQ, question and answer, collapsible sections, expand, collapse">
+<title>Frequently Asked Questions  | Caterpillar Wiki</title>
+<link rel="stylesheet" type="text/css" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/modern-business.css">
+<link rel="stylesheet" type="text/css" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<link rel="stylesheet" type="text/css" href="css/theme-blue.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+
+
+  </head>
+
+<body>
+
+   <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+           
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> The Caterpillar Project Wiki</span></a>
+            
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                <li><a href="https://github.com/caterpillarproject/wiki" target="_blank">Github</a></li>
+                
+                
+                
+                
+
+
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+
+                <li class="dropdown">
+                    
+
+
+                <!-- special insertion -->
+
+               
+                <!-- Send feedback function -->
+<script>
+function SendLinkByMail(href) {
+var subject= "Caterpillar Wiki feedback";
+var body = "I have some feedback about the Frequently Asked Questions page: ";
+body += window.location.href;
+body += "";
+var uri = "mailto:brendan.f.griffen@gmail.com?subject=";
+uri += encodeURIComponent(subject);
+uri += "&body=";
+uri += encodeURIComponent(body);
+window.location.href = uri;
+}
+</script>
+
+<li><a href="javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B" target="_blank"><i class="fa fa-envelope-o"></i> Feedback</a></li>
+
+
+                <li>
+                <!-- start search -->
+                <div id="search-demo-container">
+                <input type="text" id="search-input" placeholder="search...">
+                <ul id="results-container"></ul>
+                </div>
+                <script src="js/jekyll-search.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                SimpleJekyllSearch.init({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                dataSource: 'search.json',
+                searchResultTemplate: '<li><a href="{url}" title="Frequently Asked Questions">{title}</a></li>',
+                noResultsText: 'No results found.',
+                limit: 10,
+                fuzzy: true,
+                })
+                </script>
+                <!-- end search -->
+                </li>
+
+                
+<script type="text/javascript">
+
+    $( document ).ready(function() {
+        if (top.location == location)  {
+            $(".escapeMe").remove();
+        }
+
+    });
+
+            function breakout_of_frame() {
+                if (top.location != location) {
+                    window.open(window.location.href, '_blank');
+
+                }
+
+            }
+</script>
+
+<li class="escapeMe">
+    <a href="#" onclick="breakout_of_frame()" ><i class="fa fa-sign-out"></i> Pop-out</a>
+</li>
+
+
+
+        <!-- /.container -->
+                </ul>
+
+
+</div></nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+
+
+<!-- Content Row -->
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-md-3">
+
+        <script>
+
+            $(document).ready(function() {
+                        // Initialize navgoco with default options
+                        $("#mysidebar").navgoco({
+                            caretHtml: '',
+                            accordion: true,
+                            openClass: 'active', // open
+                            save: false, // leave false or nav highlighting doesn't work right
+                            cookie: {
+                                name: 'navgoco',
+                                expires: false,
+                                path: '/'
+                        },
+                        slide: {
+                            duration: 400,
+                            easing: 'swing'
+                                }
+                                });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+            });
+
+        </script>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        
+        <ul id="mysidebar" class="nav">
+            <center>
+        <img title="logo" src="images/company_logo_big.png" style="max-width: 200px;" align="center">
+        
+            <span class="versionTagline">version 0.1</span>
+            </center>
+
+            
+            
+            
+        
+            
+            <li><a href="#">Caterpillar</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="index.html">Welcome</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_history_motivation.html">History and Motiviation</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Simulation Overview</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_initial_conditions.html">Initial Conditions</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_parent_simulation.html">Parent Simulation</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_zoomin_simulations.html">Zoom-in Simulations</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Data Access</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_understanding_the_data.html">Understanding The Data</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_modules_and_analysis.html">Your Analysis Modules</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_data_access_examples.html">Access Examples</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sams.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_datasets.html">Other Useful Postprocessed Datasets</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Codes & Halo Catalogues</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_gadget.html">Gadget</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_rockstar.html">Rockstar</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_consistenttrees.html">Consistent-Trees</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_subfind.html">SUBFIND</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Compute Cluster Information</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_mit_cluster.html">MIT - Antares & Bigbang</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_xsede.html">XSEDE - Stampede, Comet & Ranch</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_submitting_jobs.html">Submitting Jobs With SLURM</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Project Status</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_project_status.html">Halo Progress</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sam_progress.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_caterpillar_hydro.html">Caterpillar+Hydro</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Special Queries</a>
+                <ul>
+                    
+                    
+                    
+                    <li class="active"><a href="doc_faq.html">FAQ</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+        
+
+
+
+
+   <!-- if you aren't using the accordion, uncomment this block:
+
+        <p class="external">
+            <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+        </p>
+    -->
+
+    </div>
+       <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
+    <script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+            <!-- Content Column -->
+            <div class="col-md-9">
+
+                <div class="post-header">
+   <h1 class="post-title-main">Frequently Asked Questions</h1>
+</div>
+
+<div class="post-content">
+
+   
+    <div class="summary">Here you can find some frequently asked questions of the collaboration.</div>
+   
+
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+    <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/doc_faq.md" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+
+                       <div class="panel-group" id="accordion">
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseOne">When will Caterpillar be finished?</a>
+                            </h4>
+                        </div>
+                        <div id="collapseOne" class="panel-collapse collapse noCrossRef">
+                            <div class="panel-body">
+                                This depends on the availability of computing time and the limitations of hardware. At the moment we are running many simulations at the same time. This only occurs in bursts when we have available time and we personally have time to oversee them. Each simulation takes roughly 300k hours (exluding halo finding ~2 weeks + postprocessing which is ~1-3 days). With all of these time heavy tasks, we still estimate to have the full sample by Spring/Summer of 2016.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseTwo">What is the authorship policy?</a>
+                            </h4>
+                        </div>
+                        <div id="collapseTwo" class="panel-collapse collapse noCrossRef">
+                            <div class="panel-body">
+                                Since the collaboration is quite small there is a lot of room to grow with new science. That being said, there are a few core projects which the collaboration is working towards (see the on-going projects page). Provided there is no overlap with the core science projects of the collaboration the data is freely available for anyone who would like to use it. Naturally we hope you collaborate with people within the group so you can achieve your goals as soon as possible as many of us have had years creating/analyzing the data.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseThree">How is the data going to be released to the public?</a>
+                            </h4>
+                        </div>
+                        <div id="collapseThree" class="panel-collapse collapse noCrossRef">
+                            <div class="panel-body">
+                                At the moment, we don't have a full plan in place for complete open access to the data so for the moment individuals are being given access an analysis node at MIT (bigbang). Through this portal, the entire suite is available. The size of the data (300TB+ and growing) makes it difficult to find a one size fits all solution to the public release. We are working with Illustris folks at Harvard to see if there are some optimum ways to deal this kind of load.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFour">Will the Caterpillar halos be run with gas/hydro?</a>
+                            </h4>
+                        </div>
+                        <div id="collapseFour" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                The short answer is yes, eventually. We have already setup and run gas runs of the parent simulation and are in the process of running hydro runs for the zoom-in simulations. There are many more pieces to this next stage of the project and they are still being interally reviwed (i.e. sure hydro, but _which_ flavour?). This wiki will update the status of the hydro runs in due course.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseFive">Can I use the tools/code for my own projects?</a>
+                            </h4>
+                        </div>
+                        <div id="collapseFive" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                The code is freely available to the community though if it is a non-trivial tool, we ask if you keep the developers (Alex, Greg and Brendan) in the loop so you done become unstuck using the code for the wrong reasons. Similarly, we may be able to help you get a given tool tailored for your own purposes so please let us know if you would like any assistance.
+                            </div>
+                        </div>
+                    </div>
+                    <!-- /.panel -->
+                    <div class="panel panel-default">
+                        <div class="panel-heading">
+                            <h4 class="panel-title">
+                                <a class="noCrossRef accordion-toggle" data-toggle="collapse" data-parent="#accordion" href="#collapseSix">When will you have something us observers can sink our teeth into?</a>
+                            </h4>
+                        </div>
+                        <div id="collapseSix" class="panel-collapse collapse">
+                            <div class="panel-body">
+                                Yes, Caterpillar is a dark matter only simulation. Though, that being said quite a lot can be learned from this simulation suite alone. Our main goal however is to run sophisticated semi-analytic models over the merger trees to generate mock galaxies (i.e. with stellar masses, cold gas fractions, morphologies etc.). The Munich SAM is currently being run over the Caterpillar halos and will produce a fantastic data set to do all sorts of analysis (e.g. assembly of the stellar halo, chemical tagging, stellar streams).
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- /.panel -->
+                </div>
+                <!-- /.panel-group -->
+      
+
+<div class="tags">
+    
+    <b>Tags: </b>
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+</div>
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2015 Caterpillar Project. All rights reserved.<br />
+<p>Page last updated:</span> November 3, 2015<br/> Site last generated: Nov 3, 2015 <br />
+<p><img src="images/company_logo.jpg"/></p>
+                </div>
+            </div>
+        </footer>
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+            </div><!-- /.row -->
+
+    </div>    <!-- /.container -->
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-61923556-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</html>
+

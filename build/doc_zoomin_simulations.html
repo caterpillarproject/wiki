@@ -1,0 +1,787 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Here we provide a brief summary of what was presented in Griffen et al. (2015). We also present some extra details pertaining to the contamination study.">
+<meta name="keywords" content="zoom simulationsresimulationicsgadgetcontaminationgeometrylagangian,  zoom, simulations,">
+<title>Zoom Simulations  | Caterpillar Wiki</title>
+<link rel="stylesheet" type="text/css" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/modern-business.css">
+<link rel="stylesheet" type="text/css" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<link rel="stylesheet" type="text/css" href="css/theme-blue.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+
+
+  </head>
+
+<body>
+
+   <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+           
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> The Caterpillar Project Wiki</span></a>
+            
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                <li><a href="https://github.com/caterpillarproject/wiki" target="_blank">Github</a></li>
+                
+                
+                
+                
+
+
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+
+                <li class="dropdown">
+                    
+
+
+                <!-- special insertion -->
+
+               
+                <!-- Send feedback function -->
+<script>
+function SendLinkByMail(href) {
+var subject= "Caterpillar Wiki feedback";
+var body = "I have some feedback about the Zoom Simulations page: ";
+body += window.location.href;
+body += "";
+var uri = "mailto:brendan.f.griffen@gmail.com?subject=";
+uri += encodeURIComponent(subject);
+uri += "&body=";
+uri += encodeURIComponent(body);
+window.location.href = uri;
+}
+</script>
+
+<li><a href="javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B" target="_blank"><i class="fa fa-envelope-o"></i> Feedback</a></li>
+
+
+                <li>
+                <!-- start search -->
+                <div id="search-demo-container">
+                <input type="text" id="search-input" placeholder="search...">
+                <ul id="results-container"></ul>
+                </div>
+                <script src="js/jekyll-search.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                SimpleJekyllSearch.init({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                dataSource: 'search.json',
+                searchResultTemplate: '<li><a href="{url}" title="Zoom Simulations">{title}</a></li>',
+                noResultsText: 'No results found.',
+                limit: 10,
+                fuzzy: true,
+                })
+                </script>
+                <!-- end search -->
+                </li>
+
+                
+<script type="text/javascript">
+
+    $( document ).ready(function() {
+        if (top.location == location)  {
+            $(".escapeMe").remove();
+        }
+
+    });
+
+            function breakout_of_frame() {
+                if (top.location != location) {
+                    window.open(window.location.href, '_blank');
+
+                }
+
+            }
+</script>
+
+<li class="escapeMe">
+    <a href="#" onclick="breakout_of_frame()" ><i class="fa fa-sign-out"></i> Pop-out</a>
+</li>
+
+
+
+        <!-- /.container -->
+                </ul>
+
+
+</div></nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+
+
+<!-- Content Row -->
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-md-3">
+
+        <script>
+
+            $(document).ready(function() {
+                        // Initialize navgoco with default options
+                        $("#mysidebar").navgoco({
+                            caretHtml: '',
+                            accordion: true,
+                            openClass: 'active', // open
+                            save: false, // leave false or nav highlighting doesn't work right
+                            cookie: {
+                                name: 'navgoco',
+                                expires: false,
+                                path: '/'
+                        },
+                        slide: {
+                            duration: 400,
+                            easing: 'swing'
+                                }
+                                });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+            });
+
+        </script>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        
+        <ul id="mysidebar" class="nav">
+            <center>
+        <img title="logo" src="images/company_logo_big.png" style="max-width: 200px;" align="center">
+        
+            <span class="versionTagline">version 0.1</span>
+            </center>
+
+            
+            
+            
+        
+            
+            <li><a href="#">Caterpillar</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="index.html">Welcome</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_history_motivation.html">History and Motiviation</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Simulation Overview</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_initial_conditions.html">Initial Conditions</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_parent_simulation.html">Parent Simulation</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li class="active"><a href="doc_zoomin_simulations.html">Zoom-in Simulations</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Data Access</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_understanding_the_data.html">Understanding The Data</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_modules_and_analysis.html">Your Analysis Modules</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_data_access_examples.html">Access Examples</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sams.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_datasets.html">Other Useful Postprocessed Datasets</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Codes & Halo Catalogues</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_gadget.html">Gadget</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_rockstar.html">Rockstar</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_consistenttrees.html">Consistent-Trees</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_subfind.html">SUBFIND</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Compute Cluster Information</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_mit_cluster.html">MIT - Antares & Bigbang</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_xsede.html">XSEDE - Stampede, Comet & Ranch</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_submitting_jobs.html">Submitting Jobs With SLURM</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Project Status</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_project_status.html">Halo Progress</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sam_progress.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_caterpillar_hydro.html">Caterpillar+Hydro</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Special Queries</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_faq.html">FAQ</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+        
+
+
+
+
+   <!-- if you aren't using the accordion, uncomment this block:
+
+        <p class="external">
+            <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+        </p>
+    -->
+
+    </div>
+       <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
+    <script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+            <!-- Content Column -->
+            <div class="col-md-9">
+
+                <div class="post-header">
+   <h1 class="post-title-main">Zoom Simulations</h1>
+</div>
+
+<div class="post-content">
+
+   
+    <div class="summary">Here we provide a brief summary of what was presented in Griffen et al. (2015). We also present some extra details pertaining to the contamination study.</div>
+   
+
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+    <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/doc_zoomin_simulations.md" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+
+       <p>The majority of the information about the zoom-in runs can be found in <a href="http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1509.01255">Griffen et al. (2015)</a>. Here we simply outline some details which were left out of the publication for the sake of brevity.</p>
+
+<h2 id="overview">Overview</h2>
+
+<p><center></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">~<em>Aquarius</em> <br> Level</th>
+<th style="text-align: center"><span style="font-family:Courier">MUSIC</span> <br> <em>levelmax</em></th>
+<th style="text-align: center">Effective <br> Resolution</th>
+<th style="text-align: center">\(m_{dm}\) <br> 10^4 <em>h</em>^-1 \(M_\odot\)</th>
+<th style="text-align: center">\(m_{dm}\) <br> 10^4 \(M_\odot\)</th>
+<th style="text-align: center">\(\epsilon_{dm}\) <br> pc</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">1</td>
+<td style="text-align: center">15</td>
+<td style="text-align: center">32768^3</td>
+<td style="text-align: center">0.25</td>
+<td style="text-align: center">0.37</td>
+<td style="text-align: center">36</td>
+</tr>
+<tr>
+<td style="text-align: center"><strong>2</strong></td>
+<td style="text-align: center"><strong>14</strong></td>
+<td style="text-align: center"><strong>16384^3</strong></td>
+<td style="text-align: center"><strong>2</strong></td>
+<td style="text-align: center"><strong>3</strong></td>
+<td style="text-align: center"><strong>76</strong></td>
+</tr>
+<tr>
+<td style="text-align: center">3</td>
+<td style="text-align: center">13</td>
+<td style="text-align: center">8096^3</td>
+<td style="text-align: center">16</td>
+<td style="text-align: center">24</td>
+<td style="text-align: center">152</td>
+</tr>
+<tr>
+<td style="text-align: center">4</td>
+<td style="text-align: center">12</td>
+<td style="text-align: center">4096^3</td>
+<td style="text-align: center">128</td>
+<td style="text-align: center">190</td>
+<td style="text-align: center">228</td>
+</tr>
+<tr>
+<td style="text-align: center">5</td>
+<td style="text-align: center">11</td>
+<td style="text-align: center">2048^3</td>
+<td style="text-align: center">1025</td>
+<td style="text-align: center">1527</td>
+<td style="text-align: center">452</td>
+</tr>
+</tbody></table>
+
+<p><img title="LX11 simulation" src="images/Cat1_LX11.jpg" style="max-width: 200px;">
+<img title="LX12 simulation" src="images/Cat1_LX12.jpg" style="max-width: 200px;">
+<img title="LX13 simulation" src="images/Cat1_LX13.jpg" style="max-width: 200px;">
+<img title="LX14 simulation" src="images/Cat1_LX14.jpg" style="max-width: 200px;"></p>
+
+<p></center></p>
+
+<p>Each panel represents one single realization of the Cat-1 halo at different resolutions. The far left is an LX11 run and the far right is an LX14 run.</p>
+
+<div class="alert alert-info" role="alert"><i class="fa fa-info-circle"></i> <b>Note: </b> The <span style="font-family:Courier">LX15</span> run has currently only been run for one of the halos and has been temporarily paused at z = 1. This will be finished with a few others once the main suite has been completed.</div>
+
+<div class="alert alert-danger" role="alert"><i class="fa fa-exclamation-circle"></i> <b>Warning: </b> Timesteps are spaced logarithmically in expansion factor to z = 6, then linearly spaced in expansion factor down to z = 0. Always be aware of this as it could be strength and a weakness of your study.</div>
+
+<p>We have complete (modified) <span style="font-family:Courier">rockstar</span> halo catalogues (together with <span style="font-family:Courier">consistent-trees</span> merger trees) and z = 0 <span style="font-family:Courier">subfind</span> catalogues.</p>
+
+<h2 id="contamination-study">Contamination Study</h2>
+
+<p>A number of contamination studies have been carried out. This involves changing the Lagrangian geometry in some way to keep the contamination (distance to the nearest particle type 2 as far as possible) low whilst conserving CPU hours. Our selected test geometries were as follows</p>
+
+<p><center></p>
+
+<table><thead>
+<tr>
+<th style="text-align: center">Geometry</th>
+<th>Detail</th>
+</tr>
+</thead><tbody>
+<tr>
+<td style="text-align: center">BA</td>
+<td>Original MUSIC bounding box (e.g. the exact bounding box of lagr volume).</td>
+</tr>
+<tr>
+<td style="text-align: center">BB</td>
+<td>1.2 bounding box extent</td>
+</tr>
+<tr>
+<td style="text-align: center">BC</td>
+<td>1.4 bounding box extent</td>
+</tr>
+<tr>
+<td style="text-align: center">BD</td>
+<td>1.6 bounding box extent</td>
+</tr>
+<tr>
+<td style="text-align: center">CA</td>
+<td>Convex Hull Volume</td>
+</tr>
+<tr>
+<td style="text-align: center">EA</td>
+<td>Original MUSIC ellipsoid (e.g. the exact bounding box of lagr volume).</td>
+</tr>
+<tr>
+<td style="text-align: center">EB</td>
+<td>1.1 padding</td>
+</tr>
+<tr>
+<td style="text-align: center">EC</td>
+<td>1.2 padding</td>
+</tr>
+<tr>
+<td style="text-align: center">EX</td>
+<td>1.05 padding</td>
+</tr>
+</tbody></table>
+
+<p></center></p>
+
+<p>We did this for both 4 and 5 times the virial radius at z = 0 (marked by the letter 4 or 5 at the end of the abbreviated geometry). Making a total of ~18 test halos per <em>Caterpillar</em> halo. Our requirement was that there was no contamation (particle type 2) within 1 Mpc of the host at the LX11 level.</p>
+
+<p>We also looked at how the geometry of the lagrangian volume affected the contamination radius. As outlined in Griffen et al. (2015), we did not find any correlation with geometry and overall level contamination. Every simulation requires its own tailored geometry to achieve our contamination requirements.</p>
+
+<p><center></p>
+
+<p><img title="Cat-1 contamination information" src="images/paper_contamination.jpg" style="max-width: 400px;"></p>
+
+<p></center></p>
+
+<p>The size of the lagrangian volumes were also another challenge to overcome. If a halo had LX11 ICs which were larger than 300mb, we found that we could not run these at LX14 on national facilities. The size and distance became our two biggest obstacles when running the <em>Caterpillar</em> suite.</p>
+
+<p><center>
+<img src="https://raw.githubusercontent.com/caterpillarproject/wiki/master/media/paper_contam.png" alt="Contamination" title="Contamination Plot">
+</center></p>
+
+<p>Our rockstar catalogues only use the high-resolution particles. This means that there will be halos in the outskirts of the simulation which are contaminated. These are shown clearly below. Be sure not to just take all halos within the rockstar catalogues as some of them will be contaminated (underestimated masses, wrong profiles etc.). As a safety, one should only take halos which are within the contamination distance. This changes as a function of redshift so make sure you update your cut for each snapshot. The plots below are for z = 0.</p>
+
+<p><center></p>
+
+<p><img title="Cat-1 contamination information" src="images/Cat-1_contamsub.png" style="max-width: 400px;">
+<img title="Cat-2 contamination information" src="images/Cat-2_contamsub.png" style="max-width: 400px;">
+<img title="Cat-3 contamination information" src="images/Cat-3_contamsub.png" style="max-width: 400px;">
+<img title="Cat-4 contamination information" src="images/Cat-4_contamsub.png" style="max-width: 400px;">
+<img title="Cat-5 contamination information" src="images/Cat-5_contamsub.png" style="max-width: 400px;">
+<img title="Cat-6 contamination information" src="images/Cat-6_contamsub.png" style="max-width: 400px;"></p>
+
+<p></center></p>
+
+
+<div class="tags">
+    
+    <b>Tags: </b>
+    
+
+
+
+
+
+
+
+
+
+
+
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+    
+</div>
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2015 Caterpillar Project. All rights reserved.<br />
+<p>Page last updated:</span> August 12, 2015<br/> Site last generated: Nov 3, 2015 <br />
+<p><img src="images/company_logo.jpg"/></p>
+                </div>
+            </div>
+        </footer>
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+            </div><!-- /.row -->
+
+    </div>    <!-- /.container -->
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-61923556-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</html>
+

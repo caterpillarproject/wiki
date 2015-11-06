@@ -1,0 +1,716 @@
+<!DOCTYPE html>
+<html>
+  <head>
+
+ <meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Overview of the initial conditions used for the Caterpillar suite.">
+<meta name="keywords" content=" ics, initial conditions, parameter file, music">
+<title>Initial Conditions  | Caterpillar Wiki</title>
+<link rel="stylesheet" type="text/css" href="css/syntax.css">
+<link rel="stylesheet" type="text/css" href="css/font-awesome.min.css">
+<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+<link rel="stylesheet" type="text/css" href="css/modern-business.css">
+<link rel="stylesheet" type="text/css" href="css/lavish-bootstrap.css">
+<link rel="stylesheet" type="text/css" href="css/customstyles.css">
+<link rel="stylesheet" type="text/css" href="css/theme-blue.css">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.min.js"></script>
+<script src="js/jquery.navgoco.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.4/js/bootstrap.min.js"></script>
+<script src="js/toc.js"></script>
+<script src="js/customscripts.js"></script>
+<link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+<![endif]-->
+
+
+
+
+
+
+
+ 
+
+<script>
+  $(function () {
+      $('[data-toggle="tooltip"]').tooltip()
+  })
+</script>
+
+
+
+
+
+
+
+
+  </head>
+
+<body>
+
+   <!-- Navigation -->
+<nav class="navbar navbar-inverse navbar-fixed-top">
+    <div class="container topnavlinks">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+           
+            <a class="fa fa-home fa-lg navbar-brand" href="index.html">&nbsp;<span class="projectTitle"> The Caterpillar Project Wiki</span></a>
+            
+        </div>
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav navbar-right">
+                <!-- entries without drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+                
+
+
+
+
+
+
+
+
+
+
+
+
+                
+                
+                
+                
+                <li><a href="https://github.com/caterpillarproject/wiki" target="_blank">Github</a></li>
+                
+                
+                
+                
+
+
+                <!-- entries with drop-downs appear here -->
+                <!-- conditional logic to control which topnav appears for the audience defined in the configuration file.-->
+
+                <li class="dropdown">
+                    
+
+
+                <!-- special insertion -->
+
+               
+                <!-- Send feedback function -->
+<script>
+function SendLinkByMail(href) {
+var subject= "Caterpillar Wiki feedback";
+var body = "I have some feedback about the Initial Conditions page: ";
+body += window.location.href;
+body += "";
+var uri = "mailto:brendan.f.griffen@gmail.com?subject=";
+uri += encodeURIComponent(subject);
+uri += "&body=";
+uri += encodeURIComponent(body);
+window.location.href = uri;
+}
+</script>
+
+<li><a href="javascript:(function()%7BSendLinkByMail()%3B%7D)()%3B" target="_blank"><i class="fa fa-envelope-o"></i> Feedback</a></li>
+
+
+                <li>
+                <!-- start search -->
+                <div id="search-demo-container">
+                <input type="text" id="search-input" placeholder="search...">
+                <ul id="results-container"></ul>
+                </div>
+                <script src="js/jekyll-search.js" type="text/javascript"></script>
+                <script type="text/javascript">
+                SimpleJekyllSearch.init({
+                searchInput: document.getElementById('search-input'),
+                resultsContainer: document.getElementById('results-container'),
+                dataSource: 'search.json',
+                searchResultTemplate: '<li><a href="{url}" title="Initial Conditions">{title}</a></li>',
+                noResultsText: 'No results found.',
+                limit: 10,
+                fuzzy: true,
+                })
+                </script>
+                <!-- end search -->
+                </li>
+
+                
+<script type="text/javascript">
+
+    $( document ).ready(function() {
+        if (top.location == location)  {
+            $(".escapeMe").remove();
+        }
+
+    });
+
+            function breakout_of_frame() {
+                if (top.location != location) {
+                    window.open(window.location.href, '_blank');
+
+                }
+
+            }
+</script>
+
+<li class="escapeMe">
+    <a href="#" onclick="breakout_of_frame()" ><i class="fa fa-sign-out"></i> Pop-out</a>
+</li>
+
+
+
+        <!-- /.container -->
+                </ul>
+
+
+</div></nav>
+
+
+    <!-- Page Content -->
+    <div class="container">
+        <div class="col-lg-12">&nbsp;</div>
+
+
+<!-- Content Row -->
+<div class="row">
+    <!-- Sidebar Column -->
+    <div class="col-md-3">
+
+        <script>
+
+            $(document).ready(function() {
+                        // Initialize navgoco with default options
+                        $("#mysidebar").navgoco({
+                            caretHtml: '',
+                            accordion: true,
+                            openClass: 'active', // open
+                            save: false, // leave false or nav highlighting doesn't work right
+                            cookie: {
+                                name: 'navgoco',
+                                expires: false,
+                                path: '/'
+                        },
+                        slide: {
+                            duration: 400,
+                            easing: 'swing'
+                                }
+                                });
+
+            $("#collapseAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', false);
+            });
+
+            $("#expandAll").click(function(e) {
+                e.preventDefault();
+                $("#mysidebar").navgoco('toggle', true);
+            });
+
+            });
+
+        </script>
+
+
+        
+
+
+
+
+
+
+
+
+
+
+
+        
+        <ul id="mysidebar" class="nav">
+            <center>
+        <img title="logo" src="images/company_logo_big.png" style="max-width: 200px;" align="center">
+        
+            <span class="versionTagline">version 0.1</span>
+            </center>
+
+            
+            
+            
+        
+            
+            <li><a href="#">Caterpillar</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="index.html">Welcome</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_history_motivation.html">History and Motiviation</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Simulation Overview</a>
+                <ul>
+                    
+                    
+                    
+                    <li class="active"><a href="doc_initial_conditions.html">Initial Conditions</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_parent_simulation.html">Parent Simulation</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_zoomin_simulations.html">Zoom-in Simulations</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Data Access</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_understanding_the_data.html">Understanding The Data</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_modules_and_analysis.html">Your Analysis Modules</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_data_access_examples.html">Access Examples</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sams.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_datasets.html">Other Useful Postprocessed Datasets</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Codes & Halo Catalogues</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_gadget.html">Gadget</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_rockstar.html">Rockstar</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_consistenttrees.html">Consistent-Trees</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_subfind.html">SUBFIND</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Compute Cluster Information</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_mit_cluster.html">MIT - Antares & Bigbang</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_xsede.html">XSEDE - Stampede, Comet & Ranch</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_submitting_jobs.html">Submitting Jobs With SLURM</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Project Status</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_project_status.html">Halo Progress</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_sam_progress.html">Semi-analytic Models</a></li>
+                    
+
+                    
+
+            
+            
+                    
+                    
+                    <li><a href="doc_caterpillar_hydro.html">Caterpillar+Hydro</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+            
+            <li><a href="#">Special Queries</a>
+                <ul>
+                    
+                    
+                    
+                    <li><a href="doc_faq.html">FAQ</a></li>
+                    
+
+                    
+
+            
+            
+</ul>
+        
+        
+        
+
+
+
+
+   <!-- if you aren't using the accordion, uncomment this block:
+
+        <p class="external">
+            <a href="#" id="collapseAll">Collapse All</a> | <a href="#" id="expandAll">Expand All</a>
+        </p>
+    -->
+
+    </div>
+       <!-- this highlights the active parent class in the navgoco sidebar. this is critical so that the parent expands when you're viewing a page. This must appear below the sidebar code above.-->
+    <script>$("li.active").parents('li').toggleClass("active");</script>
+
+
+            <!-- Content Column -->
+            <div class="col-md-9">
+
+                <div class="post-header">
+   <h1 class="post-title-main">Initial Conditions</h1>
+</div>
+
+<div class="post-content">
+
+   
+    <div class="summary">Overview of the initial conditions used for the Caterpillar suite.</div>
+   
+
+    
+<!-- this handles the automatic toc. use ## for subheads to auto-generate the on-page minitoc. if you use html tags, you must supply an ID for the heading element in order for it to appear in the minitoc. -->
+<script>
+$( document ).ready(function() {
+  // Handler for .ready() called.
+
+$('#toc').toc({ minimumHeaders: 0, listType: 'ul', showSpeed: 0, headers: 'h2,h3,h4' });
+
+/* this offset helps account for the space taken up by the floating toolbar. */
+$('#toc').on('click', 'a', function() {
+  var target = $(this.getAttribute('href'))
+    , scroll_target = target.offset().top
+
+  $(window).scrollTop(scroll_target - 10);
+  return false
+})
+  
+});
+</script>
+
+<div id="toc"></div>
+
+    
+    <a href="https://github.com/tomjohnson1492/documentation-theme-jekyll/blob/gh-pages/doc_initial_conditions.md" class="btn btn-default " role="button"><i class="fa fa-github fa-lg"></i> Edit me</a>
+    
+
+       <h2 id="overview">Overview</h2>
+
+<p>We use the multi-scale cosmological initial conditions creator <span style="font-family:Courier">MUSIC</span>. <span style="font-family:Courier">MUSIC</span> is a computer program to generate nested grid initial conditions for high-resolution &quot;zoom&quot; cosmological simulations. A detailed description of the algorithms can be found in Hahn &amp; Abel (2011). You can download the user&#39;s guide <a href="https://bitbucket.org/ohahn/music/downloads/MUSIC_Users_Guide.pdf">here</a> or obtain a copy of the code <a href="https://people.phys.ethz.ch/%7Ehahn/MUSIC/">here</a>. Any questions should be directed to <a href="brendan.f.griffen@gmail.com">Brendan Griffen</a> and then if that fails, <a href="hahn@phys.ethz.ch">Oliver Hahn</a>.</p>
+
+<h2 id="parameters">Parameters</h2>
+
+<p>These are the parameter files which were used to generate the initial coditions for the <em>Caterpillar</em> project. We adopt the raw Planck (2013) cosmology and do not use 2nd order lagrangian perturbation theory. The <a href="https://bitbucket.org/ohahn/music/downloads/MUSIC_Users_Guide.pdf">user guide</a> contains all the information required to understand the following parameter files. Within each simulation directory, there is a file named <code>OUTPUTmusic</code> which gives the log of the construction of the initial conditions.</p>
+
+<h3 id="parent-simulation">Parent Simulation</h3>
+
+<p>First we constructed a parent simulation of sufficient size to include thousands of Milky Way sized systems but also of sufficient resolution to construct good lagrangian volumes. We decided on ~10,000 particles per Milky Way-sized host and a 100 Mpc/h volume. Our <code>level_max</code> is 10 below, which means our parent simulation&#39;s effective resolution is (2<sup>10</sup>)<sup>3</sup> = (1024)<sup>3</sup> (i.e. a particle mass of 8.72 x 10<sup>7</sup> \(M_\odot/h\).</p>
+
+<p>If you have access to the MIT cluster (<code>bigbang.mit.edu</code>), you can access the parent simulation data here: <code>/bigbang/data/AnnaGroup/caterpillar/parent/gL100X10/</code>. Within this folder you&#39;ll find the following file (within <code>ics/</code>): </p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># parentics.conf</span>
+<span class="o">[</span>setup<span class="o">]</span>
+<span class="nv">boxlength</span>               <span class="o">=</span> 100
+<span class="nv">zstart</span>                  <span class="o">=</span> 127
+<span class="nv">levelmin</span>                <span class="o">=</span> 10
+<span class="nv">levelmin_TF</span>             <span class="o">=</span> 10
+<span class="nv">levelmax</span>                <span class="o">=</span> 10
+<span class="nv">padding</span>                 <span class="o">=</span> 8
+<span class="nv">overlap</span>                 <span class="o">=</span> 4
+<span class="nv">ref_center</span>              <span class="o">=</span> 0.5, 0.5, 0.5
+<span class="nv">ref_extent</span>              <span class="o">=</span> 0.2, 0.2, 0.2
+<span class="nv">align_top</span>               <span class="o">=</span> yes
+<span class="nv">baryons</span>                 <span class="o">=</span> no
+<span class="nv">use_2LPT</span>                <span class="o">=</span> no
+<span class="nv">use_LLA</span>                 <span class="o">=</span> no
+<span class="nv">periodic_TF</span>             <span class="o">=</span> yes
+
+<span class="o">[</span>cosmology<span class="o">]</span>
+<span class="nv">Omega_m</span>                 <span class="o">=</span> 0.3175      
+<span class="nv">Omega_L</span>                 <span class="o">=</span> 0.6825       
+<span class="nv">Omega_b</span>                 <span class="o">=</span> 0.049     
+<span class="nv">H0</span>                      <span class="o">=</span> 67.11         
+<span class="nv">sigma_8</span>                 <span class="o">=</span> 0.8344        
+<span class="nv">nspec</span>                   <span class="o">=</span> 0.9624        
+<span class="nv">transfer</span>                <span class="o">=</span> eisenstein
+
+<span class="o">[</span>random<span class="o">]</span>
+seed<span class="o">[</span>10<span class="o">]</span>                <span class="o">=</span> 34567
+
+<span class="o">[</span>output<span class="o">]</span>
+<span class="nv">format</span>                  <span class="o">=</span> gadget2
+<span class="nv">filename</span>                <span class="o">=</span> ./ics
+<span class="nv">gadget_num_files</span>        <span class="o">=</span> 128
+
+<span class="o">[</span>poisson<span class="o">]</span>
+<span class="nv">fft_fine</span>                <span class="o">=</span> yes
+<span class="nv">accuracy</span>                <span class="o">=</span> 1e-5
+<span class="nv">pre_smooth</span>              <span class="o">=</span> 3
+<span class="nv">post_smooth</span>             <span class="o">=</span> 3
+<span class="nv">smoother</span>                <span class="o">=</span> gs
+<span class="nv">laplace_order</span>           <span class="o">=</span> 6
+<span class="nv">grad_order</span>              <span class="o">=</span> 6
+</code></pre></div>
+<h3 id="zoom-simulations">Zoom Simulations</h3>
+
+<p>Each simulation folder has a configuration file for MUSIC (e.g. <code>H1079897_EX_Z127_P7_LN7_LX14_O4_NV4.conf</code>) which was used to construct the initial conditions.</p>
+
+<p>There are a few things to note about the zoom-in paramter files when compared to the parent volume parameter file. First is we now specify a <code>region_point_file</code> which defines the x,y,z (normalized to the box width) of the particles to be resampled. We have added the parameter <code>hipadding</code> which our own modification to allow for expanded regions. 1.05, for example, represents an expanded ellipsoid (by 5%). See Section 2.3 of <a href="http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1509.01255">Griffen et al. (2015)</a> for a more detailed description of these geometries and their impact on contamination.</p>
+
+<p>We also draw the reader&#39;s attention to the seed values. Note that we do not set the seed values for any level lower than the parent volume (10) which makes <span style="font-family:Courier">MUSIC</span> smooth out any levels lower than 10. The seed values at 11 are simply the halo numbers and then each level higher scales by a factor of 2 of this original number. This was required because the ICs were generated through our automatic pipeline and each simulation needs unique values to seed the random noise field. The <code>levelmin_TF</code> is also set to be the same as the parent volume (10). The padding and overlap parameters are the same for all simulations.</p>
+<div class="highlight"><pre><code class="language-bash" data-lang="bash"><span class="c"># H1079897_EX_Z127_P7_LN7_LX14_O4_NV4.conf</span>
+<span class="o">[</span>setup<span class="o">]</span>
+<span class="nv">boxlength</span>            <span class="o">=</span> 100
+<span class="nv">zstart</span>               <span class="o">=</span> 127
+<span class="nv">levelmin</span>             <span class="o">=</span> 7
+<span class="nv">levelmin_TF</span>          <span class="o">=</span> 10
+<span class="nv">levelmax</span>             <span class="o">=</span> 14
+<span class="nv">padding</span>              <span class="o">=</span> 7
+<span class="nv">overlap</span>              <span class="o">=</span> 4
+<span class="nv">region</span>               <span class="o">=</span> ellipsoid
+<span class="nv">hipadding</span>            <span class="o">=</span> 1.05
+<span class="nv">region_point_file</span>    <span class="o">=</span> /n/home01/bgriffen/data/caterpillar/ics/lagr/H1079897NRVIR4
+<span class="nv">align_top</span>            <span class="o">=</span> no
+<span class="nv">baryons</span>              <span class="o">=</span> no
+<span class="nv">use_2LPT</span>             <span class="o">=</span> no
+<span class="nv">use_2LLA</span>             <span class="o">=</span> no
+<span class="nv">periodic_TF</span>          <span class="o">=</span> yes
+
+<span class="o">[</span>cosmology<span class="o">]</span>
+<span class="nv">Omega_m</span>              <span class="o">=</span> 0.3175
+<span class="nv">Omega_L</span>              <span class="o">=</span> 0.6825
+<span class="nv">Omega_b</span>              <span class="o">=</span> 0.049
+<span class="nv">H0</span>                   <span class="o">=</span> 67.11
+<span class="nv">sigma_8</span>              <span class="o">=</span> 0.8344
+<span class="nv">nspec</span>                <span class="o">=</span> 0.9624
+<span class="nv">transfer</span>             <span class="o">=</span> eisenstein
+
+<span class="o">[</span>random<span class="o">]</span>
+seed<span class="o">[</span>10<span class="o">]</span>              <span class="o">=</span> 34567
+seed<span class="o">[</span>11<span class="o">]</span>              <span class="o">=</span> 1079897
+seed<span class="o">[</span>12<span class="o">]</span>              <span class="o">=</span> 2159794
+seed<span class="o">[</span>13<span class="o">]</span>              <span class="o">=</span> 3239691
+seed<span class="o">[</span>14<span class="o">]</span>              <span class="o">=</span> 4319588
+
+<span class="o">[</span>output<span class="o">]</span>
+<span class="nv">format</span>               <span class="o">=</span> gadget2_double
+<span class="nv">filename</span>             <span class="o">=</span> ./ics
+<span class="nv">gadget_num_files</span>     <span class="o">=</span> 8
+<span class="nv">gadget_spreadcoarse</span>  <span class="o">=</span> yes
+
+<span class="o">[</span>poisson<span class="o">]</span>
+<span class="nv">fft_fine</span>             <span class="o">=</span> yes
+<span class="nv">accuracy</span>             <span class="o">=</span> 1e-05
+<span class="nv">pre_smooth</span>           <span class="o">=</span> 3
+<span class="nv">post_smooth</span>          <span class="o">=</span> 3
+<span class="nv">smoother</span>             <span class="o">=</span> gs
+<span class="nv">laplace_order</span>        <span class="o">=</span> 6
+<span class="nv">grad_order</span>           <span class="o">=</span> 6
+</code></pre></div>
+
+<div class="tags">
+    
+</div>
+
+
+
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'idrbwjekyll'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function() {
+            var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+            dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+            (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+        })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript>
+
+
+</div>
+
+
+
+<footer>
+            <div class="row">
+                <div class="col-lg-12 footer">
+               &copy;2015 Caterpillar Project. All rights reserved.<br />
+<p>Page last updated:</span> November 3, 2015<br/> Site last generated: Nov 3, 2015 <br />
+<p><img src="images/company_logo.jpg"/></p>
+                </div>
+            </div>
+        </footer>
+
+<script type="text/javascript"
+  src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
+
+            </div><!-- /.row -->
+
+    </div>    <!-- /.container -->
+
+</body>
+
+<!-- the google_analytics_id gets auto inserted from the config file -->
+
+
+<script>
+    (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+                (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+    })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    ga('create', 'UA-61923556-1', 'auto');
+    ga('send', 'pageview');
+</script>
+
+
+
+</html>
+
