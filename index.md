@@ -34,4 +34,4 @@ The PDF contains a timestamp in the header indicating when it was last generated
 
 ## Questions?
 
-If you have questions, contact me at <a href="mailto:brendan.f.griffen@gmail.com">brendan.f.griffen@gmail.com</a>. His regular site is [brendangriffen.com](http://www.brendangriffen.com). He is eager to make this wiki content as clear as possible, so please let him know if there are areas of confusion that need clarifying.
+If you have questions, contact Brendan Griffen at <a href="mailto:brendan.f.griffen@gmail.com">brendan.f.griffen@gmail.com</a>. His regular site is [brendangriffen.com](http://www.brendangriffen.com). He is eager to make this wiki content as clear as possible, so please let him know if there are areas of confusion that need clarifying.
