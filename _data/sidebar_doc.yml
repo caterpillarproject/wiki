@@ -42,7 +42,7 @@ entries:
           product: all
           version: all
 
-        - title: History and Motiviation
+        - title: History and Motivation
           url: /doc_history_motivation.html
           audience: astronomers
           platform: all
