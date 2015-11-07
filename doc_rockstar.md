@@ -93,16 +93,16 @@ In the <span style="font-family:Courier">Rockstar</span> config file, specify `F
 Also specify `DELETE_BINARY_OUTPUT_AFTER_FINISHED = 1` This deletes the standard .bin files. The new files contain all of the same info as the old .bin files, so they are just a waste of space.
 
 ### Reading Data
-Use `RSDataReader.py` version 7. There is now a new parameter called `total_npart` which specifies the total number of particles belonging to a halo, including substructure. 
+Inside `haloutils.py` we use `RSDataReader.py` version 10. There is now a new parameter called `total_npart` which specifies the total number of particles belonging to a halo, including substructure. 
 
 * `get_particles_from_halo()` will now return all particles from a halo. 
-* `get_all_particles_from_halo()` returns exactly the same thing in version=7. T
+* `get_all_particles_from_halo()` returns exactly the same thing except when using old version of rockstar.
 
-he first “npart” particles from any given halo are exactly the same particles you would have gotten in the original <span style="font-family:Courier">Rockstar</span> output. The extra particles after that are the ones we were after.
+he first `npart` particles from any given halo are exactly the same particles you would have gotten in the original <span style="font-family:Courier">Rockstar</span> output.
 
 * the files now end with the extension `.fullbin` instead of `.bin`
 
-They are ~10% larger due to the extra particles.
+They are ~10% larger due to the extra particles in version 10.
 
 ### Changes to Rockstar code
 
@@ -121,13 +121,11 @@ At the moment, `cat.total_particles` will not be truly accurate. It will refer t
 
 Another note: Files are not written out in order to keep halo ids written out in order. Ex: halos.0.bin might write halos 0 – 250 `halos.1.bin` would write out halos 1001-1250 and `halos.2.bin` would write out halos 251-500. This means the unsorted data[i] array in `RSDataReader` will not always have the property that `data[i]` is the halo of `id = i`.
 
-## Running Rockstar/P-Gadget3
-
-This will be a brief tutorial on running <span style="font-family:Courier">Rockstar</span>/<span style="font-family:Courier">P-Gadget3</span> using code developed by the MIT group (Brendan, Alex, Greg). 
+## Running Rockstar (i.e. the same version as in Caterpillar).
 
 So you have a Gadget simulation output and you want to run <span style="font-family:Courier">Rockstar</span> on it.
 
-First you'll need a working version of <span style="font-family:Courier">Rockstar</span> which works with the read modules that we will be using later. As of April 2014, the current version of <span style="font-family:Courier">Rockstar</span> (RC2+ with hdf5 support) works with our modules. Be sure to also get `consistent-trees-0.9.9.2`.
+First you'll need a working version of <span style="font-family:Courier">Rockstar</span> which works with the read modules that we will be using later. The version we used for <span style="font-family:Courier">Rockstar</span> can be found [here](https://bitbucket.org/alexji/rockstar). The output (when put int he appropriate folders, will work with out modules. Be sure to also get `consistent-trees-0.9.9.2` to connect it all together. consistent-trees isn't the latest version as were were a victum of the times; we had to go with one version, for all time.
 
 1. Go to your <span style="font-family:Courier">Rockstar</span>-hdf5 directory and run "make with_hdf5". If it breaks, you need to point to the hdf5 libraries on your system.
 
