@@ -8,6 +8,6 @@ summary: "Here is the project status. It is very much a work in progress as data
 
 ## Halo Progress
 
-This is updated periodically from `bigbang.mit.edu`.
+This is updated periodically from `bigbang.mit.edu`. Some runs are on Hydra or Stampede which won't have been updated here unless they have been copied to `bigbang.mit.edu`.
 
 ![alt text](https://www.dropbox.com/s/t35s3k7l15257uq/status.png?raw=1 "Halo Status")
