@@ -8,4 +8,5 @@ summary: "Here is the project status. It is very much a work in progress as data
 
 ## Halo Progress
 
-To be added soon...
+This is updated periodically. Click [here](https://www.dropbox.com/s/t35s3k7l15257uq/status.png?raw=1) for status.
+
