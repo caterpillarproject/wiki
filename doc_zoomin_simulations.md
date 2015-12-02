@@ -86,11 +86,11 @@ The size of the lagrangian volumes were also another challenge to overcome. If a
 Our rockstar catalogues only use the high-resolution particles. This means that there will be halos in the outskirts of the simulation which are contaminated. These are shown clearly below. Be sure not to just take all halos within the rockstar catalogues as some of them will be contaminated (underestimated masses, wrong profiles etc.). As a safety, one should only take halos which are within the contamination distance. This changes as a function of redshift so make sure you update your cut for each snapshot. The plots below are for z = 0.
 
 <center>
-<img title="" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/contam1.png" style="max-width: 200px;">
-<img title="" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/contam2.png" style="max-width: 200px;">
-<img title="" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/contam3.png" style="max-width: 200px;">
-<img title="" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/contam4.png" style="max-width: 200px;">
-<img title="" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/contam5.png" style="max-width: 200px;">
+<img title="" src="images/Cat-1_contamsub.png" style="max-width: 300px;">
+<img title="" src="images/Cat-1_contamsub.png" style="max-width: 300px;">
+<img title="" src="images/Cat-1_contamsub.png" style="max-width: 300px;">
+<img title="" src="images/Cat-1_contamsub.png" style="max-width: 300px;">
+<img title="" src="images/Cat-1_contamsub.png" style="max-width: 300px;">
 </center>
 
 
