@@ -277,6 +277,29 @@ for mass,scale in zip(main_branch['mvir'],main_branch['scale']):
 0.88: 2.47e+14 ... 
 ```
 
+A function to find the descendent branch of any halo in merger tree catalogue. You should use it as follows:
+
+```python
+# get a tree of interest
+mtc = haloutils.load_zoom_mtc(hpath)
+host = mtc.Trees[0]
+
+# make a dictionary that maps ids to rows
+desc_map = host.get_desc_map()
+
+# get the descendent branch.
+desc_branch = host.getDescBranch(row, desc_map)
+
+# similarly for main branches, you can use a dictionary that speeds up the
+# getMainBranch call substantially.
+mmp_map = host.get_mmp_map()
+main_branch = host.getMainBranch(row, mmp_map)
+
+# you can get the branches without making the map as below, but they will be much slower.
+# only faster if you use ~ < 10 calls to the function.
+desc_branch = host.getDescBranch(row)
+main_branch = host.getMainBranch(row)
+```
 ## Accessing Particle Data
 
 If you want the Gadget header:
