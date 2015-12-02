@@ -76,19 +76,19 @@ We also looked at how the geometry of the lagrangian volume affected the contami
 The size of the lagrangian volumes were also another challenge to overcome. If a halo had LX11 ICs which were larger than 300mb, we found that we could not run these at LX14 on national facilities. The size and distance became our two biggest obstacles when running the _Caterpillar_ suite.
 
 <center>
-<img title="" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/contam1.png" style="max-width: 300px;">
-<img title="" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/contam2.png" style="max-width: 300px;">
-<img title="" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/contam3.png" style="max-width: 300px;">
-<img title="" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/contam4.png" style="max-width: 300px;">
+<img title="" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/contam1.png" style="max-width: 350px;">
+<img title="" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/contam2.png" style="max-width: 350px;">
+<img title="" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/contam3.png" style="max-width: 350px;">
+<img title="" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/contam4.png" style="max-width: 350px;">
 </center>
 
 Our rockstar catalogues only use the high-resolution particles. This means that there will be halos in the outskirts of the simulation which are contaminated. These are shown clearly below. Be sure not to just take all halos within the rockstar catalogues as some of them will be contaminated (underestimated masses, wrong profiles etc.). As a safety, one should only take halos which are within the contamination distance. This changes as a function of redshift so make sure you update your cut for each snapshot. The plots below are for z = 0.
 
 <center>
-<img title="" src="images/Cat-1_contamsub.png" style="max-width: 300px;">
-<img title="" src="images/Cat-2_contamsub.png" style="max-width: 300px;">
-<img title="" src="images/Cat-3_contamsub.png" style="max-width: 300px;">
-<img title="" src="images/Cat-4_contamsub.png" style="max-width: 300px;">
+<img title="" src="images/Cat-1_contamsub.png" style="max-width: 400px;">
+<img title="" src="images/Cat-2_contamsub.png" style="max-width: 400px;">
+<img title="" src="images/Cat-3_contamsub.png" style="max-width: 400px;">
+<img title="" src="images/Cat-4_contamsub.png" style="max-width: 400px;">
 </center>
 
 
