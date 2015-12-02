@@ -41,7 +41,7 @@ We have complete (modified) <span style="font-family:Courier">rockstar</span> ha
 
 This image shows the difference between the time step resolutions used in Caterpillar and those used in the Aquarius simulation. We wanted higher resolution at all redshifts for many purposes. At z > 6 we wanted to model Lyman-Werner radiation which requires timesteps of order the lifespan of Population III star formation. At low redshift we wanted timesteps of roughly 50-60 Myrs which is the disruption time scale of many small dwarf galaxies of the Milky Way. This also allows detailed modelling of the pericentric passages of infalling satellite systems, which is a crucial parameter for determining post-infall mass loss, for example.
 
-<img title="LX14 simulation" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/caterpillar_temporal_resolution.jpg" style="max-width: 300px;">
+<center><img title="LX14 simulation" src="https://dl.dropboxusercontent.com/u/22892859/caterpillar/caterpillar_temporal_resolution.jpg" style="max-width: 600px;"></center>
 
 ## Contamination Study
 
