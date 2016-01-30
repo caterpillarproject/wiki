@@ -27,6 +27,8 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | rsid  |
 | backsnap  |
 | depth  |
+
+| Quantites At Maximum Mass |
 | max_mass_rsid  |
 | max_mass_snap  |
 | max_mass_vmax  |
@@ -47,6 +49,8 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | max_mass_Jy  |
 | max_mass_Jz  |
 | max_mass_xoff  |
+
+| Quantites At Peak \\(V_max\\) |
 | peak_rsid  |
 | peak_snap  |
 | peak_vmax  |
@@ -67,6 +71,8 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | peak_Jy  |
 | peak_Jz  |
 | peak_xoff  |
+
+| Quantites At Infall |
 | infall_rsid  |
 | infall_snap  |
 | infall_vmax  |
