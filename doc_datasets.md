@@ -19,16 +19,8 @@ We have all halo information at three different times:
 In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak_'. The full list of variables accessible in these catalogues are as follows: 
 
 <center>
-
-| Variable | 
+|  Quantities At Maxium Mass |
 |  :----: |
-| Unnamed  |
-| sub_rank  |
-| rsid  |
-| backsnap  |
-| depth  |
-
-| Quantites At Maximum Mass |
 | max_mass_rsid  |
 | max_mass_snap  |
 | max_mass_vmax  |
@@ -50,7 +42,8 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | max_mass_Jz  |
 | max_mass_xoff  |
 
-| Quantites At Peak \\(V_max\\) |
+| Quantites At \\(V_{peak}\\)  |
+|  :----: |
 | peak_rsid  |
 | peak_snap  |
 | peak_vmax  |
@@ -71,8 +64,15 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | peak_Jy  |
 | peak_Jz  |
 | peak_xoff  |
+| peak_mgrav  |
+| peak_corevelx  |
+| peak_corevely  |
+| peak_corevelz  |
+| peak_hostid_RS  |
+| peak_rvmax  |
 
-| Quantites At Infall |
+| Quantites At Infall  |
+|  :----: |
 | infall_rsid  |
 | infall_snap  |
 | infall_vmax  |
@@ -93,18 +93,20 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | infall_Jy  |
 | infall_Jz  |
 | infall_xoff  |
-| peak_mgrav  |
 | infall_mgrav  |
-| peak_hostid_RS  |
 | infall_hostid_RS  |
-| peak_rvmax  |
 | infall_rvmax  |
-| peak_corevelx  |
-| peak_corevely  |
-| peak_corevelz  |
 | infall_corevelx  |
 | infall_corevely  |
 | infall_corevelz  |
+
+| Other Variables | 
+|  :----: |
+| Unnamed  |
+| sub_rank  |
+| rsid  |
+| backsnap  |
+| depth  |
 | nstars  |
 | start_pos  |
 
