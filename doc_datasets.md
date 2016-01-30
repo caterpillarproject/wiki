@@ -122,12 +122,12 @@ Here are some extra variables:
 
 | Variable | Description | 
 |  :----: | :----: |
-| Unnamed  |  | 
+| Unnamed  | -  | 
 | sub_rank  |  uniquely labels all halos, unless they merged with another subhalo in the catalog. In such a case the sub_rank is the negative of the one it ultimately merged with | 
-| rsid  |   | 
+| rsid  | present day rockstar id  | 
 | backsnap  | the last time a halo is in the merger tree before merging | 
 | depth  | number of mergers of the satellite until a z=0 halo |
-| nstars  |   | 
+| nstars  | number of tagged particles  | 
 | start_pos  |    | 
 
 </center>
