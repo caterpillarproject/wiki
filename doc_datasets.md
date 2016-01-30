@@ -18,9 +18,7 @@ We have all halo information at three different times:
 
 In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak_'. The full list of variables accessible in these catalogues are as follows: 
 
-
 <center>
-
 |  Quantities At Maxium Mass | 
 |  :----: | 
 | max_mass_rsid  |
@@ -105,7 +103,6 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | infall_corevelx  |
 | infall_corevely  |
 | infall_corevelz  |
-
 </center>
 
 <center>
@@ -118,7 +115,6 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | depth  |
 | nstars  |
 | start_pos  |
-
 </center>
 
 ### Data Access 
