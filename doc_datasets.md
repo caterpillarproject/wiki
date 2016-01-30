@@ -16,89 +16,89 @@ We have all halo information at three different times:
 * infall: the halo just as it crosses the virial radius of the main host halo.
 * peak \\(V_{max}\\): the halo at the maximum of \\(V_{max}\\) along its main branch (i.e. the highest \\(V_{max}\\) its ever had).
 
-In the catalogues these variables are prepended with `max_', `infall_' and `peak_'. The full list of variables accessible in these catalogues are as follows: 
+In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak_'. The full list of variables accessible in these catalogues are as follows: 
 
-Variable  
-:----:  
-Unnamed  
-sub_rank  
-rsid  
-backsnap  
-depth  
-max_mass_rsid  
-max_mass_snap  
-max_mass_vmax  
-max_mass  
-max_mass_posx  
-max_mass_posy  
-max_mass_posz  
-max_mass_pecvx  
-max_mass_pecvy  
-max_mass_pecvz  
-max_mass_virialratio  
-max_mass_hostid_MT  
-max_mass_rvir  
-max_mass_spinbullock  
-max_mass_rs  
-max_mass_scale_of_last_MM  
-max_mass_Jx  
-max_mass_Jy  
-max_mass_Jz  
-max_mass_xoff  
-peak_rsid  
-peak_snap  
-peak_vmax  
-peak_mvir  
-peak_posx  
-peak_posy  
-peak_posz  
-peak_pecvx  
-peak_pecvy  
-peak_pecvz  
-peak_virialratio  
-peak_hostid_MT  
-peak_rvir  
-peak_spinbullock  
-peak_rs  
-peak_scale_of_last_MM  
-peak_Jx  
-peak_Jy  
-peak_Jz  
-peak_xoff  
-infall_rsid  
-infall_snap  
-infall_vmax  
-infall_mvir  
-infall_posx  
-infall_posy  
-infall_posz  
-infall_pecvx  
-infall_pecvy  
-infall_pecvz  
-infall_virialratio  
-infall_hostid_MT  
-infall_rvir  
-infall_spinbullock  
-infall_rs  
-infall_scale_of_last_MM  
-infall_Jx  
-infall_Jy  
-infall_Jz  
-infall_xoff  
-peak_mgrav  
-infall_mgrav  
-peak_hostid_RS  
-infall_hostid_RS  
-peak_rvmax  
-infall_rvmax  
-peak_corevelx  
-peak_corevely  
-peak_corevelz  
-infall_corevelx  
-infall_corevely  
-infall_corevelz  
-nstars  
-start_pos  
+| Variable | 
+|  :----: |
+| Unnamed  |
+| sub_rank  |
+| rsid  |
+| backsnap  |
+| depth  |
+| max_mass_rsid  |
+| max_mass_snap  |
+| max_mass_vmax  |
+| max_mass  |
+| max_mass_posx  |
+| max_mass_posy  |
+| max_mass_posz  |
+| max_mass_pecvx  |
+| max_mass_pecvy  |
+| max_mass_pecvz  |
+| max_mass_virialratio  |
+| max_mass_hostid_MT  |
+| max_mass_rvir  |
+| max_mass_spinbullock  |
+| max_mass_rs  |
+| max_mass_scale_of_last_MM  |
+| max_mass_Jx  |
+| max_mass_Jy  |
+| max_mass_Jz  |
+| max_mass_xoff  |
+| peak_rsid  |
+| peak_snap  |
+| peak_vmax  |
+| peak_mvir  |
+| peak_posx  |
+| peak_posy  |
+| peak_posz  |
+| peak_pecvx  |
+| peak_pecvy  |
+| peak_pecvz  |
+| peak_virialratio  |
+| peak_hostid_MT  |
+| peak_rvir  |
+| peak_spinbullock  |
+| peak_rs  |
+| peak_scale_of_last_MM  |
+| peak_Jx  |
+| peak_Jy  |
+| peak_Jz  |
+| peak_xoff  |
+| infall_rsid  |
+| infall_snap  |
+| infall_vmax  |
+| infall_mvir  |
+| infall_posx  |
+| infall_posy  |
+| infall_posz  |
+| infall_pecvx  |
+| infall_pecvy  |
+| infall_pecvz  |
+| infall_virialratio  |
+| infall_hostid_MT  |
+| infall_rvir  |
+| infall_spinbullock  |
+| infall_rs  |
+| infall_scale_of_last_MM  |
+| infall_Jx  |
+| infall_Jy  |
+| infall_Jz  |
+| infall_xoff  |
+| peak_mgrav  |
+| infall_mgrav  |
+| peak_hostid_RS  |
+| infall_hostid_RS  |
+| peak_rvmax  |
+| infall_rvmax  |
+| peak_corevelx  |
+| peak_corevely  |
+| peak_corevelz  |
+| infall_corevelx  |
+| infall_corevely  |
+| infall_corevelz  |
+| nstars  |
+| start_pos  |
 
 ### Data Access 
 
