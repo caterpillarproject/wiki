@@ -18,6 +18,8 @@ We have all halo information at three different times:
 
 In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak_'. The full list of variables accessible in these catalogues are as follows: 
 
+<center>
+
 | Variable | 
 |  :----: |
 | Unnamed  |
@@ -100,6 +102,8 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | nstars  |
 | start_pos  |
 
+</center>
+
 ### Data Access 
 
 Below is an example of how to access this data. Be sure to have obtained access to the Caterpillar modules from the git repository and that you are using `MTanalysis3' to load the destroyed catalogues.
@@ -132,14 +136,13 @@ mper_a = mta.mass_per_particle(hpath,dataE,row=10) # stellar mass per particle o
 mper_b = mta.mass_per_particle(hpath,dataD,row=25) # stellar mass per particle of particular halo
 ```
 
-## Available Datasets
+## Other Available Datasets
 
 To be added soon.
 
 This will include:
 
-* all extant and destroyed catalogues which includes the properties of all halos at infall or at maximum mass etc.
-* minihalo catalogues: properties of minihalos, i.e. halos which first go above \\(T_{vir}\sim2000\\)K.
-* first galaxy catalogues: properties of first galaxies, i.e. halos which first go above \\(T_{vir}\sim10,000\\)K.
+* minihalo catalogues: properties of minihalos, i.e. halos which first go above \\(T_{vir}\sim2000\\)K etc.
+* first galaxy catalogues: properties of first galaxies, i.e. halos which first go above \\(T_{vir}\sim10,000\\)K etc.
 
 ... more soon.
