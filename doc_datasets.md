@@ -113,10 +113,7 @@ import MTanalysis3 as mta
 import numpy as np
 import haloutils as htils
 
-hids = htils.cid2hid.values()
-lx=14
-hid=hids[0]
-hpath = htils.get_hpath_lx(hid,lx)
+hpath = htils.get_paper_paths_lx(14)[0]
 
 AD = mta.AllDestroyedData()
 AE = mta.AllExtantData()
