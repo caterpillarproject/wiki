@@ -120,30 +120,21 @@ Here are some extra variables:
 
 <center>
 
-| Variable | 
-|  :----: |
-| Unnamed  |
-| sub_rank  |
-| rsid  |
-| backsnap  |
-| depth  |
-| nstars  |
-| start_pos  |  
+| Variable | Description | 
+|  :----: | :----: |
+| Unnamed  |  | 
+| sub_rank  |  | 
+| rsid  |   | 
+| backsnap  | the last time a halo is in the merger tree before merging. | 
+| depth  | number of mergers of the satellite until a z=0 halo |
+| nstars  |   | 
+| start_pos  |    | 
 
 </center>
+Note: extant halos all have a 'backsnap' of 319, and the destroyed are all < 319
 
-```python
-# depth column - number of mergers of the satellite until a z=0 halo
-# 'backsnap' column now refers to the last time a halo is in the merger
-# tree before merging.  So the extant halos all
-# have a 'backsnap' of 319, and the destroyed are all < 319
-```
+The extant data and destroyed data sets have the same columns and  can thus be combined. The extant data now recursively trace halos that fell into the host, then merged with an extant sub which they did not before. Also, the data includes systems that exist but don't have a proper infall time (formed within the virial radius, or don't have a good merger tree that far back). All the infall properties are set to -1 in such cases. There is a 'depth' column which tells you the number of mergers of the satellite until a z=0 halo. e.g. a subhalo mergers with a subhalo which merges with an extant halo has a depth of 2. The formerly cumbersome 'backsnap' column now refers to the last time a halo is in the merger tree before merging.  So the extant halos all have a 'backsnap' of 319, and the destroyed are all < 319. The 'sub_rank' column uniquely labels all halos, unless they merged with another subhalo in the catalog. In such a case the sub_rank is the negative of the one it ultimately merged with. So you can quickly find all subhalos that ever merged with a particular extant, or depth=1 destroyed subhalo.
 
-Some extra notes about the data:
-
-```bash
- Now the extant data and destroyed data sets have the same columns and  can thus be combined. The extant data now recursively trace halos that fell into the host, then merged with an extant sub which they did not before. Also, the data includes systems that exist but don't have a proper infall time (formed within the virial radius, or don't have a good merger tree that far back). All the infall properties are set to -1 in such cases. There is a 'depth' column which tells you the number of mergers of the satellite until a z=0 halo. e.g. a subhalo mergers with a subhalo which merges with an extant halo has a depth of 2. The formerly cumbersome 'backsnap' column now refers to the last time a halo is in the merger tree before merging.  So the extant halos all have a 'backsnap' of 319, and the destroyed are all < 319. The 'sub_rank' column uniquely labels all halos, unless they merged with another subhalo in the catalog. In such a case the sub_rank is the negative of the one it ultimately merged with. So you can quickly find all subhalos that ever merged with a particular extant, or depth=1 destroyed subhalo.
-"""
 
 ### Data Access 
 
