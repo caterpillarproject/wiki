@@ -41,7 +41,9 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | max_mass_Jy  |
 | max_mass_Jz  |
 | max_mass_xoff  |
+</center>
 
+<center>
 | Quantites At \\(V_{peak}\\)  |
 |  :----: |
 | peak_rsid  |
@@ -70,7 +72,9 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | peak_corevelz  |
 | peak_hostid_RS  |
 | peak_rvmax  |
+</center>
 
+<center>
 | Quantites At Infall  |
 |  :----: |
 | infall_rsid  |
@@ -100,6 +104,9 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | infall_corevely  |
 | infall_corevelz  |
 
+</center>
+
+<center>
 | Other Variables | 
 |  :----: |
 | Unnamed  |
