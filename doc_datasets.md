@@ -16,7 +16,7 @@ We have all halo information at three different times:
 * infall: the halo just as it crosses the virial radius of the main host halo.
 * peak \\(V_{max}\\): the halo at the maximum of \\(V_{max}\\) along its main branch (i.e. the highest \\(V_{max}\\) its ever had).
 
-In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak_'. The full list of variables accessible in these catalogues are as follows: 
+In the catalogues these variables are prepended with `max_`, `infall_` and `peak_`. The full list of variables accessible in these catalogues are as follows: 
 
 These are the quantites at maximum mass:  
   
