@@ -18,8 +18,10 @@ We have all halo information at three different times:
 
 In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak_'. The full list of variables accessible in these catalogues are as follows: 
 
+These are the quantites at maximum mass:
+
 <center>
-|  Quantities At Maxium Mass | 
+|  Variable | 
 |  :----: | 
 | max_mass_rsid  |
 | max_mass_snap  |
@@ -43,8 +45,10 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | max_mass_xoff  |
 </center>
 
+These are the quantities At \\(V_{peak}\\):
+
 <center>
-| Quantites At \\(V_{peak}\\)  |
+|  Variable |
 |  :----: |
 | peak_rsid  |
 | peak_snap  |
@@ -74,8 +78,10 @@ In the catalogues these variables are prepended with 'max_', 'infall_' and 'peak
 | peak_rvmax  |
 </center>
 
+These are the quantities at infall:
+
 <center>
-| Quantites At Infall  |
+| Variable  |
 |  :----: |
 | infall_rsid  |
 | infall_snap  |
