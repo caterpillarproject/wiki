@@ -158,7 +158,7 @@ def read(hpath):
     return pandas.read_csv(hpath+'/analysis/AllDestroyedData.dat',sep='\t')
 ```
 
-Alternatively, you can access the data through our `MTanalysis` modules which contains some extra functionality. Make sure you have obtained access to the Caterpillar modules from the git repository and that you are using `MTanalysis3' to load the destroyed/extant catalogues.
+Alternatively, you can access the data through our `MTanalysis3` modules which contains some extra functionality. Make sure you have obtained access to the Caterpillar modules from the git repository and that you are using `MTanalysis3' to load the destroyed/extant catalogues.
 
 ```python
 import MTanalysis3 as mta
