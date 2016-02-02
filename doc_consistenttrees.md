@@ -18,8 +18,8 @@ The consistent-trees output it similar to that of the rockstar catalogue except 
 variable | units | definition
 :---: | :---: | ---
 `id` | - | id of the halo in the merger tree
-`pid` | - | parent id
-`upid` | -  | 
+`pid` | - | the next level up halo if the halo is a subhalo (otherwise -1) 
+`upid` | -  | the ID of the uppermost level of the halo if the halo is a subhalo (otherwise -1) 
 `bfid` | - | breadth first order id
 `dfid` | - | depth first order id
 `origid` | - | original id as identified in Rockstar catalogue
@@ -27,8 +27,8 @@ variable | units | definition
 `snap` | - | snapshot 
 `scale` | - | scale factor
 `desc_id` | - | descendant id 
-`num_prog` | - | number of progenitors
-`phantom` | - | whether it is a phantom halo 
+`num_prog` | - | number of progenitors  
+`phantom` | - | Nonzero if the halo is a "phantom" halo, i.e. a halo not found by Rockstar but inserted by consistent-trees to link timesteps  
 `sam_mvir` | Msol/h | smoothed virial mass
 `mvir` |  Msol/h | virial mass (Brian & Norman prescription) (it is actually mgrav from Rockstar) 
 `rvir` | kpc | virial radius (Brian & Norman prescription) 
