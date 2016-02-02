@@ -8,7 +8,7 @@ summary: "Here you can find a range of available datasets which have been postpr
 ## Subhalo Catalogue Information
 
 ### Data Description 
-In each of the halo `analysis/' subdirectories we have extant and destroyed catalogue information for the subhalos of the main host.
+In each of the halo `analysis/` subdirectories we have extant and destroyed catalogue information for the subhalos of the main host.
 
 We have all halo information at three different times:
 
@@ -139,6 +139,24 @@ The 'sub_rank' column uniquely labels all halos, unless they merged with another
 
 
 ### Data Access 
+
+You can access the data with the following Python functions straight from the `analysis` directory.
+
+```python
+import pandas as pd
+import haloutils as htils
+
+# get a random halo path
+hpath = htils.get_paper_paths_lx(14)[0]
+
+# for reading AllExtantData:
+def read(hpath):
+        return pandas.read_csv(hpath+'/analysis/AllExtantData.dat',sep='\t')
+
+# for reading AllDestroyedData:
+def read(hpath):
+    return pandas.read_csv(hpath+'/analysis/AllDestroyedData.dat',sep='\t')
+```
 
 Below is an example of how to access this data. Be sure to have obtained access to the Caterpillar modules from the git repository and that you are using `MTanalysis3' to load the destroyed catalogues.
 
