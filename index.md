@@ -15,13 +15,12 @@ Status of all Caterpillar halos can be found at this link (updated once per day)
 [APJ] *IMPORTANT!* We are currently re-running rockstar on several LX14 halos to increase their time resolution up to 320 snaps (instead of 256). Due to our slow rockstar, I this will probably take about 2-3 weeks per halo on one AMD node (at best 7 run at a time). While this happens, our standard haloutils.py code (e.g. load\_rscat, load\_partblock ) will not correctly access data from several halo IDs. For the bad halos, Brendan has kept their old rockstar catalogs in halos\_bound\_coarse which you can read manually with RSDataReader and MTCatalogue. The old coarse snapshots are kept on the "grinder" storage server, and if you need them you should ask Brendan.
 
 Here's the list of halo IDs that are good/not good to use.
-Good (14 halos): `447649, 95289, 1354437, 5320, 581141, 1130025, 1725139, 581180, 1232164, 1387186, 1292085, 94687, 1599988, 388476`
-
-Bad (11 halos): `1195448, 1631506, 1422331, 1725272, 1725372, 264569, 1268839, 196589, 1079897, 94638, 796175`
+Only use (14 halos): `447649, 95289, 1354437, 5320, 581141, 1130025, 1725139, 581180, 1232164, 1387186, 1292085, 94687, 1599988, 388476`
 
 You can get a list of good-to-use hpaths with:
 ```python
-hpaths = [haloutils.get_hpath_lx(hid,14) for hid in [447649, 95289, 1354437, 5320, 581141, 1130025, 1725139, 581180, 1232164, 1387186, 1292085, 94687, 1599988, 388476]]
+hpaths = [haloutils.get_hpath_lx(hid,14) for hid in [447649, 95289, 1354437, 5320, 581141, 1130025, 1725139, 581180, \
+ 								    1232164, 1387186, 1292085, 94687, 1599988, 388476]]
 ```
 
 ## Overview 
