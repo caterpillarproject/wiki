@@ -16,6 +16,7 @@ The color code is as follows (and only pertains to the LX14 runs):
 * yellow: running on Comet
 * green: running at Antares
 * cyan: running on Odyssey
+* magenta: running on Stampede
 * red: some level of contamination
 * black: nothing of this halo is being run
 
