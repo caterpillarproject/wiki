@@ -7,6 +7,10 @@ summary: "Information relating to the compute cluster at MKI."
 
 The MKI cluster (with respect to Caterpillar) at MIT has one login node (`antares.mit.edu`) which connects to a three primary blocks of slave nodes and one analysis node (`bigbang.mit.edu`). 
 
+<center>
+<img title="parent simulation" src="images/clustermap.png" style="max-width: 400px;">
+</center>
+
 ## Compute Nodes (for farming jobs)
 
 ### RegNodes
