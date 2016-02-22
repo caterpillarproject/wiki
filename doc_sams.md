@@ -16,5 +16,16 @@ Code has been developed to convert consistent-trees merger trees into a format w
 ```bash
 /bigbang/data/AnnaGroup/caterpillar/halos/{type}_mass_halos/H{haloid}/H{haloid}_EB_Z127_P7_LN7_LX14_O4_NV4/sam/LGalaxies/treedata/
 ```
+An example script to submit to the cluster to run a model:
+
+```bash
+#!/bin/bash
+#SBATCH -o LGalaxies.o%j
+#SBATCH -e LGalaxies.e%j
+#SBATCH -J LGalaxiesLX11
+#SBATCH -p AMD64
+#SBATCH -n 64
+mpirun -np 64 ./L-Galaxies ./input/input_Caterpillar_PLANCK_PLANCK.par 1>OUTPUT 2>ERROR
+```
 
 The project is still very much in development so please contact Brendan Griffen if you would like to be involved.
