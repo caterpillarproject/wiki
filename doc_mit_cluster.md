@@ -8,10 +8,10 @@ summary: "Information relating to the compute cluster at MKI."
 The MKI cluster (with respect to Caterpillar) at MIT has one login node (`antares.mit.edu`) which connects to a three primary blocks of slave nodes and one analysis node (`bigbang.mit.edu`). 
 
 <center>
-<img title="parent simulation" src="images/clustermap.png" style="max-width: 400px;">
+<img title="parent simulation" src="images/clustermap.png" style="max-width: 700px;">
 </center>
 
-## Compute Nodes (for farming jobs)
+## Compute Nodes through antares.mit.edu (for farming jobs)
 
 ### RegNodes
 Block 1:
@@ -44,7 +44,7 @@ This partition should only be used for _MPI enabled_ codes as it has faster inte
 
 This partition should _only be used for extremely expensive runs which require 100GB++ memory and for codes that are MPI enabled_. You can also used openMP multi-threaded jobs which require large amounts of memory (1 job per node). At this stage, there are no time-limits or fixed memory limits for each of the nodes.
 
-## Analysis Node (for plotting, running scripts etc.)
+## Analysis Node bigbang.mit.edu (for plotting, running scripts etc.)
 
 The Frebel group as MIT also has access to an analysis node which is connected to the Caterpillar data called `bigbang`. It can be accessed via ssh `username@bigbang.mit.edu`. See Data Access on this site to get started with your analysis once you understand the storage layout below.
 
