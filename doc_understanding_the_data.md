@@ -29,7 +29,7 @@ Here is the initial list of Caterpillar halos found in Griffen et al. (2015) wit
 Cat-1 | 1631506 | Cat-7  | 94687 | Cat-13 | 1725272 | Cat-19 | 1292085
 Cat-2 | 264569  | Cat-8  | 1130025 | Cat-14 | 1195448 | Cat-20 | 95289
 Cat-3 | 1725139 | Cat-9  | 1387186 | Cat-15 | 1599988 | Cat-21 | 1232164
-Cat-4 | 44764   | Cat-10 | 581180 | Cat-16 | 796175 | Cat-22 | 1422331
+Cat-4 | 447649   | Cat-10 | 581180 | Cat-16 | 796175 | Cat-22 | 1422331
 Cat-5 | 5320    | Cat-11 | 1725372 | Cat-17 | 388476 | Cat-23 | 196589
 Cat-6 | 581141  | Cat-12 | 1354437 | Cat-18 | 1079897 | Cat-24 | 1268839
 
