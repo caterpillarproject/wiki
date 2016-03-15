@@ -153,7 +153,7 @@ import haloutils as htils
 catnum = 1
 lx = 14
 
-hpath = htils.get_hpath(catnum,lx)
+hpath = htils.catnum_hpath(catnum,lx)
 xpos = htils.get_quant_zoom(hpath,'x')
 min2 = htils.get_quant_zoom(hpath,'min2')
 ```
