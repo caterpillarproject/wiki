@@ -49,7 +49,7 @@ In Gadget | LX11 | LX12 | LX13 | LX14
 `SofteningBndry` | 0.0390625	  | 0.01953125	  | 0.009765625	| 0.004882813
 
 * units of Mpc/h
-* 
+
 </center>
 
 ## Temporal Resolution
