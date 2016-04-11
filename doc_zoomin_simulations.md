@@ -36,15 +36,17 @@ We have complete (modified) <span style="font-family:Courier">rockstar</span> ha
 
 ## Force Softening
 
-Softening was 1/80th the interparticle separation. We adopt the formula: `boxwidth/lx^2/80` but stagger the force softenings for each higher level as 4xbase, 8xbase, 32xbase, 64xbase where base is the base force softening. For each of the zooms, this equates to:
+Softening was 1/80th the interparticle separation. We adopt the formula: `boxwidth/lx^2/80` but stagger the force softenings for each higher level as 4 x base, 8 x base, 32 x base, 64 x base where base is the base force softening. For each of the zooms, this equates to:
 
 In Gadget | LX11 | LX12 | LX13 | LX14
  :---: | :---: | :---: | :---: | :---: 
-`SofteningHal`o | 0.000610352	| 0.000305176	| 0.000152588	| 7.62939E-05
+`SofteningHalo` | 0.000610352	| 0.000305176	| 0.000152588	| 0.0000762939
 `SofteningDisk` | 0.002441406	| 0.001220703	| 0.000610352	| 0.000305176
 `SofteningBulge` | 0.004882813	| 0.002441406	| 0.001220703	| 0.000610352
 `SofteningStars` | 0.01953125	| 0.009765625 |	0.004882813	| 0.002441406
 `SofteningBndry` | 0.0390625	  | 0.01953125	  | 0.009765625	| 0.004882813
+
+* units of pc/h
 
 ## Temporal Resolution
 
