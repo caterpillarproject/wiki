@@ -7,7 +7,7 @@ keywords: zoom, simulations,
 summary: "Here we provide a brief summary of what was presented in Griffen et al. (2015). We also present some extra details pertaining to the contamination study."
 ---
 
-The majority of the information about the zoom-in runs can be found in [Griffen et al. (2015)](http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1509.01255). Here we simply outline some details which were left out of the publication for the sake of brevity.
+The majority of the information about the zoom-in runs can be found in [Griffen et al. (2016)](http://adsabs.harvard.edu/cgi-bin/bib_query?arXiv:1509.01255). Here we simply outline some details which were left out of the publication for the sake of brevity.
 
 ## Overview
 
@@ -32,8 +32,19 @@ Each panel represents one single realization of the Cat-1 halo at different reso
 
 {{site.data.alerts.note}} The <span style="font-family:Courier">LX15</span> run has currently only been run for one of the halos and has been temporarily paused at z = 1. This will be finished with a few others once the main suite has been completed.{{site.data.alerts.end}}
 
-
 We have complete (modified) <span style="font-family:Courier">rockstar</span> halo catalogues (together with <span style="font-family:Courier">consistent-trees</span> merger trees) and z = 0 <span style="font-family:Courier">subfind</span> catalogues.
+
+## Force Softening
+
+Softening was 1/80th the interparticle separation. We adopt the formula: `boxwidth/lx^2/80` but stagger the force softenings for each higher level as 4xbase, 8xbase, 32xbase, 64xbase where base is the base force softening. For each of the zooms, this equates to:
+
+In Gadget | LX11 | LX12 | LX13 | LX14
+ :---: | :---: | :---: | :---: | :---: 
+`SofteningHal`o | 0.000610352	| 0.000305176	| 0.000152588	| 7.62939E-05
+`SofteningDisk` | 0.002441406	| 0.001220703	| 0.000610352	| 0.000305176
+`SofteningBulge` | 0.004882813	| 0.002441406	| 0.001220703	| 0.000610352
+`SofteningStars` | 0.01953125	| 0.009765625 |	0.004882813	| 0.002441406
+`SofteningBndry` | 0.0390625	  | 0.01953125	  | 0.009765625	| 0.004882813
 
 ## Temporal Resolution
 
