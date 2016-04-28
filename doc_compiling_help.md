@@ -79,7 +79,7 @@ endif
 
 ## Odyssey
 
-### Gadget-3
+### P-Gadget3
 
 Set the correct systype:
 
@@ -102,6 +102,45 @@ FFTW_LIBS=
 MPICHLIB =
 HDF5INCL =  -DH5_USE_16_API
 HDF5LIB  =  -lhdf5
+endif
+```
+
+### Gadget4
+
+Set your SYSTYPE:
+
+```bash
+SYSTYPE="odyssey"
+```
+
+Makefile.path.odyssey:
+
+```bash
+GSL_INCL =
+GSL_LIBS =
+FFTW_INCL= -I/n/home03/cpopa/fftw3/include
+FFTW_LIBS= -L/n/home03/cpopa/fftw3/lib
+MPICHLIB =
+HDF5_INCL =
+HDF5_LIBS  =  -lhdf5 -lz
+HWLOC_INCL=
+HWLOC_LIB = -lhwloc
+```
+
+Makefile.comp.odyssey:
+
+```bash
+CC   =  mpiicc -std=c99    # sets the C-compiler
+OPT  += -DMPICH_IGNORE_CXX_SEEK
+CPP  =  mpiicpc  -std=c++11  # sets the C++-compiler
+OPTIMIZE =   -O2 -Wno-unknown-pragmas
+CPV  =  $(CC)
+LINKER = mpiicpc
+ifeq (NUM_THREADS,$(findstring NUM_THREADS,$(CONFIGVARS)))
+OPTIMIZE +=  -fopenmp
+OPT  += -DIMPOSE_PINNING -DSOCKETS=4 -DMAX_CORES=16
+else
+OPTIMIZE +=  -Wno-unknown-pragmas
 endif
 ```
 
@@ -154,45 +193,6 @@ OPT      += -DIMPOSE_PINNING -DSOCKETS=4 -DMAX_CORES=16
 else
 OPTIMIZE += -diag-disable 3180
 endif
-endif
-```
-
-### Gadget4
-
-Set your SYSTYPE:
-
-```bash
-SYSTYPE="odyssey"
-```
-
-Makefile.path.odyssey:
-
-```bash
-GSL_INCL =
-GSL_LIBS =
-FFTW_INCL= -I/n/home03/cpopa/fftw3/include
-FFTW_LIBS= -L/n/home03/cpopa/fftw3/lib
-MPICHLIB =
-HDF5_INCL =
-HDF5_LIBS  =  -lhdf5 -lz
-HWLOC_INCL=
-HWLOC_LIB = -lhwloc
-```
-
-Makefile.comp.odyssey:
-
-```bash
-CC   =  mpiicc -std=c99    # sets the C-compiler
-OPT  += -DMPICH_IGNORE_CXX_SEEK
-CPP  =  mpiicpc  -std=c++11  # sets the C++-compiler
-OPTIMIZE =   -O2 -Wno-unknown-pragmas
-CPV  =  $(CC)
-LINKER = mpiicpc
-ifeq (NUM_THREADS,$(findstring NUM_THREADS,$(CONFIGVARS)))
-OPTIMIZE +=  -fopenmp
-OPT  += -DIMPOSE_PINNING -DSOCKETS=4 -DMAX_CORES=16
-else
-OPTIMIZE +=  -Wno-unknown-pragmas
 endif
 ```
 
