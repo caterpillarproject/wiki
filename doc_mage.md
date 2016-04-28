@@ -1,7 +1,7 @@
 ---
 title: MAGE: Mergers And Galaxy Environments
 tags: [hydrodynamics,gas,status]
-last_updated: November 3, 2015
+last_updated: April 28, 2016
 summary: "Project investigating environmental properties of Caterpillar during merger events."
 ---
 
