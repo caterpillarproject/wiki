@@ -5,4 +5,12 @@ last_updated: November 3, 2015
 summary: "Project investigating environmental properties of Caterpillar during merger events."
 ---
 
-To be added soon.
+## Halo Selection
+
+## Simulation Parameters
+
+## Hydrodynamic Model
+
+## People
+
+... and more to be added soon.
