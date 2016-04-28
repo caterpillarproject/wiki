@@ -186,7 +186,14 @@ entries:
           product: all
           version: all
 
-    - title: Project Status
+        - title: Compiling Gadget and Arepo
+          url: /doc_compiling_help.html
+          audience: astronomers
+          platform: all
+          product: all
+          version: all
+
+    - title: Projects
       audience: astronomers
       platform: all
       product: all
@@ -208,8 +215,15 @@ entries:
           product: all
           version: all
 
-        - title: Caterpillar+Hydro
-          url: /doc_caterpillar_hydro.html
+        - title: MAGE
+          url: /doc_mage.html
+          audience: astronomers
+          platform: all
+          product: all
+          version: all
+
+        - title: ETHOS
+          url: /doc_ethos.html
           audience: astronomers
           platform: all
           product: all
@@ -229,3 +243,19 @@ entries:
             platform: all
             product: all
             version: all
+
+    - title: Related Projects
+      audience: astronomers
+      platform: all
+      product: all
+      version: all
+      print: true
+      items:
+
+          - title: FAQ
+            url: /doc_mage.html
+            audience: astronomers
+            platform: all
+            product: all
+            version: all
+
