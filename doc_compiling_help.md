@@ -21,7 +21,6 @@ FFTW_LIBS= -L/bigbang/data/bgriffen/lib/fftw2/lib
 MPICHLIB = -L/opt/mpich2/gnu/lib
 HDF5INCL = -I/bigbang/data/bgriffen/lib/hdf5-1.8.13/include -DH5_USE_16_API
 HDF5LIB  = -L/bigbang/data/bgriffen/lib/hdf5-1.8.13/lib -lhdf5 -lz
-#-R/bigbang/data/bgriffen/lib/hdf5-1.8.10/lib
 endif
 ```
 
@@ -52,6 +51,7 @@ endif
 
 Makefile.path.antares will contain:
 
+```bash
 GSL_INCL   = -I/bigbang/data/bgriffen/lib/gsl-1.9/include
 GSL_LIBS   = -L/bigbang/data/bgriffen/lib/gsl-1.9/lib -Wl,-R/bigbang/data/bgriffen/lib/gsl-1.9/lib -lgsl -lgslcblas
 FFTW_INCL  = -I/bigbang/data/bgriffen/lib/fftw-3.3.4/include
@@ -60,20 +60,17 @@ MPICHLIB   = -L/opt/mpich2/gnu/lib
 HDF5_INCL  = -I/bigbang/data/bgriffen/lib/hdf5-1.8.10/include
 HDF5_LIBS  = -L/bigbang/data/bgriffen/lib/hdf5-1.8.10/lib -lhdf5 -Xlinker -R -Xlinker /bigbang/data/bgriffen/lib/hdf5-1.8.10/lib
 HWLOC_LIBS = -L/bigbang/data/bgriffen/lib/hwloc-1.8.1/lib -lhwloc
-
+```
 ### Arepo
 
 ```bash
 ifeq ($(SYSTYPE),"antares")
 CC   =  mpicc -g
-#OPTIMIZE = -xO4 -xchip=native -xarch=amd64a
 OPTIMIZE =  -O1 -g -Wall -m64
 GSL_INCL = -I/home/bgriffen/lib/gsl-1.9/include
 GSL_LIBS = -L/home/bgriffen/lib/gsl-1.9/lib
 FFTW_INCL= -I/home/bgriffen/lib/fftw-2.1.5/include
 FFTW_LIBS= -L/home/bgriffen/lib/fftw-2.1.5/lib
-#MPICHLIB = -L/opt/openmpi/lib -lmpi
-#MPICHLIB = -L/bigbang/data/bgriffen/lib/openmpi-1.6.5/build/lib -lmpi
 MPICHLIB = -L/opt/mpich2/gnu/lib
 HDF5INCL = -I/bigbang/data/bgriffen/lib/hdf5-1.8.10/include
 HDF5LIB  = -L/bigbang/data/bgriffen/lib/hdf5-1.8.10/lib -lhdf5 -lz -Wl,-R/bigbang/data/bgriffen/lib/hdf5-1.8.10/lib
@@ -96,7 +93,6 @@ CC   =  mpicc
 ifeq (SOFTDOUBLEDOUBLE,$(findstring SOFTDOUBLEDOUBLE,$(CONFIGVARS)))
 CC   =  mpiCC
 endif
-#gnu
 OPT      +=  -DMPICH_IGNORE_CXX_SEEK
 OPTIMIZE =   -O1 -g -Wall -m64 #-O3 -g -Wall -m64
 GSL_INCL =
@@ -104,10 +100,6 @@ GSL_LIBS =
 FFTW_INCL=
 FFTW_LIBS=
 MPICHLIB =
-#HDF5INCL =  -I/n/sw/hdf5-1.8.5_gnu/include
-#HDF5LIB  =  -L/n/sw/hdf5-1.8.5_gnu/lib -lhdf5
-#HDF5INCL = -I/n/sw/centos6/hdf5-1.8.10-patch1_openmpi-1.6.3_intel-13.0.079/include
-#HDF5LIB  = -L/n/sw/centos6/hdf5-1.8.10-patch1_openmpi-1.6.3_intel-13.0.079/lib -lhdf5 -lz
 HDF5INCL =  -DH5_USE_16_API
 HDF5LIB  =  -lhdf5
 endif
@@ -133,6 +125,8 @@ module load centos6/hdf5-1.8.11_gcc-4.4.7
 module load  gmp/5.1.3-fasrc01
 module load  hpc/fftw-2.1.5_impi-4.1.0.024_intel-13.0.079
 ```
+
+Within the Makefile, place:
 
 ```bash
 ifeq ($(SYSTYPE),"odyssey-intel")
@@ -176,8 +170,6 @@ Makefile.path.odyssey:
 ```bash
 GSL_INCL =
 GSL_LIBS =
-#FFTW_INCL=
-#FFTW_LIBS=
 FFTW_INCL= -I/n/home03/cpopa/fftw3/include
 FFTW_LIBS= -L/n/home03/cpopa/fftw3/lib
 MPICHLIB =
