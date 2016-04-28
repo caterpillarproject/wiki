@@ -34,14 +34,6 @@ Some of the more prominent features of this wiki include, but are not limited to
 * important information about strengths and limitations of the dataset which are not fully published
 * rules of thumb to keep in mind (resolution limits, contamination etc.)
 
-## PDF Download Of Documentation
-
-If you would like to download this wiki as a PDF, you can do so here. The PDF is mostly the same  as the online help, except that some elements (such as video or special layouts) don't translate the the print medium, so they're excluded.
-
-<a target="_blank" class="noCrossRef" href="doc_{{site.audience}}_pdf.pdf"><button type="button" class="btn btn-default" aria-label="Left Align"><span class="glyphicon glyphicon-download-alt" aria-hidden="true"></span> PDF Download</button></a>
-
-The PDF contains a timestamp in the header indicating when it was last generated. If you download a PDF, keep in mind that it may go out of date quickly. Always compare your PDF timestamp against the online help timestamp (which you can find in the footer).
-
 ## Questions?
 
 If you have questions, contact Brendan Griffen at <a href="mailto:brendan.f.griffen@gmail.com">brendan.f.griffen@gmail.com</a>. His regular site is [brendangriffen.com](http://www.brendangriffen.com). He is eager to make this wiki content as clear as possible, so please let him know if there are areas of confusion that need clarifying.
