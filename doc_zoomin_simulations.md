@@ -13,7 +13,7 @@ The majority of the information about the zoom-in runs can be found in [Griffen 
 
 <center>
 
-~*Aquarius* <br> Level | <span style="font-family:Courier">MUSIC</span> <br> *levelmax* | Effective <br> Resolution | \\(m_{dm}\\) <br> 10^4 *h*^-1 \\(M_\odot\\) | \\(m_{dm}\\) <br> 10^4 \\(M_\odot\\) | \\(\epsilon_{dm}\\) <br> pc 
+~*Aquarius* <br> Level | <span style="font-family:Courier">MUSIC</span> <br> *levelmax* | Effective <br> Resolution | \\(m_{dm}\\) <br> 10^4 *h*^-1 \\(M_\odot\\) | \\(m_{dm}\\) <br> 10^4 \\(M_\odot\\) | \\(\epsilon_{dm}\\) <br> pc/h 
   :---: | :---: | :---: | :---: | :---: | :---: 
 1 | 15 | 32768^3 | 0.25 | 0.37 | 36
 **2** | **14** | **16384^3** | **2** | **3** | **76**
