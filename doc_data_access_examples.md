@@ -220,8 +220,12 @@ import haloutils as htils
 import numpy as np
 
 # select the caterpillar halo of interest
+# based on halo id and resolution level
 
-want_cat_sim = 5
+hid = 1387186
+lx = 14
+
+hpath = htils.hid_hpath_lx(hid,lx)
 
 # select the last snapshot (z = 0)
 snapshot = htils.get_lastsnap(hpath)
@@ -326,8 +330,10 @@ Be sure to divide the relevant quantities (pos, rvir etc.) by `header.hubble`. S
 If you wanted to get the postions of all the particles for a specific halo (or any block). 
 
 ```python
-pos htils.load_partblock(hpath,zoomid,"POS ") # units Mpc/h
-# "VEL ", "ID  " also work (notice the space)
+pos = htils.load_partblock(hpath,zoomid,"POS ") # units Mpc/h
+# "VEL ", "ID  ", "MASS" etc. also work (notice the space)
+# check readsnapshots/readsnapHDF5.py for the other block names 
+# you can call in the caterpillar modules
 
 print pos*1000. # kpc/h
 
@@ -338,6 +344,17 @@ print pos*1000. # kpc/h
 [ 49757.3515625   21470.00195312   6461.90917969]
 ...
 ```
+
+If you want to read in the entire block, use the following:
+
+```python
+import haloutils as htils
+hpath = '/bigbang/data/AnnaGroup/caterpillar/halos/middle_mass_halos/H1387186/H1387186_EB_Z127_P7_LN7_LX14_O4_NV4'
+pos = htils.load_partblock(hpath,319,"POS ")
+mass = htils.load_partblock(hpath,319,"MASS")
+```
+
+Note that the mass block will have different values depending on how many layers of refinement there are for that zoom in simulation. If you use this code on a parent simulation it will be an array of length N all of the same value because there is only one particle type.
 
 If you wanted just the ids for a selection of particle ids:
 
