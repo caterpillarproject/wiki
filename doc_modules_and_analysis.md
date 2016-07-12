@@ -1,12 +1,10 @@
 ---
-title: Commenting on files
+title: Setting Up Your Work Environment
 tags: [modules,analysis,code,python,data]
-last_updated: November 3, 2015
+last_updated: July 12, 2016
 summary: "Once you have an account on the MKI compute cluster you can use these tools to get your started on accessing the Caterpillar data."
 published: true
 ---
-
-## Setting Up Your Work Environment & Tools
 
 * Read the [cluster information](https://github.com/caterpillarproject/wiki/wiki/Cluster-Information).
 
