@@ -349,7 +349,11 @@ If you want to read in the entire block, use the following:
 
 ```python
 import haloutils as htils
-hpath = '/bigbang/data/AnnaGroup/caterpillar/halos/middle_mass_halos/H1387186/H1387186_EB_Z127_P7_LN7_LX14_O4_NV4'
+
+hid = 1387186
+lx = 14
+hpath = htils.hid_hpath_lx(hid,lx)
+
 pos = htils.load_partblock(hpath,319,"POS ")
 mass = htils.load_partblock(hpath,319,"MASS")
 ```
