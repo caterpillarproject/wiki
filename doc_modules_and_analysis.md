@@ -14,6 +14,7 @@ published: true
 
 ```bash
 git@github.com:caterpillarproject/modules.git
+git@github.com:caterpillarproject/analysis.git
 ```
 
 You can obtain them in the following way (ensure you are in the directory you want them to be placed):
